@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A484EC8D256C1CE600393E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC8C256C1CE600393E60 /* AppDelegate.swift */; };
+		A484EC8F256C1CE600393E60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC8E256C1CE600393E60 /* SceneDelegate.swift */; };
+		A484EC91256C1CE600393E60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC90256C1CE600393E60 /* ViewController.swift */; };
+		A484EC94256C1CE600393E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A484EC92256C1CE600393E60 /* Main.storyboard */; };
+		A484EC97256C1CE600393E60 /* Cargo_Transportation.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A484EC95256C1CE600393E60 /* Cargo_Transportation.xcdatamodeld */; };
+		A484EC99256C1CE900393E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A484EC98256C1CE900393E60 /* Assets.xcassets */; };
+		A484EC9C256C1CE900393E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A484EC9A256C1CE900393E60 /* LaunchScreen.storyboard */; };
+		A484ECA7256C1CE900393E60 /* Cargo_TransportationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484ECA6256C1CE900393E60 /* Cargo_TransportationTests.swift */; };
+		A484ECB2256C1CE900393E60 /* Cargo_TransportationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484ECB1256C1CE900393E60 /* Cargo_TransportationUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A484ECA3256C1CE900393E60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A484EC81256C1CE600393E60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A484EC88256C1CE600393E60;
+			remoteInfo = "Cargo Transportation";
+		};
+		A484ECAE256C1CE900393E60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A484EC81256C1CE600393E60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A484EC88256C1CE600393E60;
+			remoteInfo = "Cargo Transportation";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A484EC89256C1CE600393E60 /* Cargo Transportation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cargo Transportation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A484EC8C256C1CE600393E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A484EC8E256C1CE600393E60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A484EC90256C1CE600393E60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A484EC93256C1CE600393E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A484EC96256C1CE600393E60 /* Cargo_Transportation.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cargo_Transportation.xcdatamodel; sourceTree = "<group>"; };
+		A484EC98256C1CE900393E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A484EC9B256C1CE900393E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A484EC9D256C1CE900393E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A484ECA2256C1CE900393E60 /* Cargo TransportationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cargo TransportationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A484ECA6256C1CE900393E60 /* Cargo_TransportationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cargo_TransportationTests.swift; sourceTree = "<group>"; };
+		A484ECA8256C1CE900393E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A484ECAD256C1CE900393E60 /* Cargo TransportationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cargo TransportationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A484ECB1256C1CE900393E60 /* Cargo_TransportationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cargo_TransportationUITests.swift; sourceTree = "<group>"; };
+		A484ECB3256C1CE900393E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A484EC86256C1CE600393E60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A484EC9F256C1CE900393E60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A484ECAA256C1CE900393E60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A484EC80256C1CE600393E60 = {
+			isa = PBXGroup;
+			children = (
+				A484EC8B256C1CE600393E60 /* Cargo Transportation */,
+				A484ECA5256C1CE900393E60 /* Cargo TransportationTests */,
+				A484ECB0256C1CE900393E60 /* Cargo TransportationUITests */,
+				A484EC8A256C1CE600393E60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A484EC8A256C1CE600393E60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A484EC89256C1CE600393E60 /* Cargo Transportation.app */,
+				A484ECA2256C1CE900393E60 /* Cargo TransportationTests.xctest */,
+				A484ECAD256C1CE900393E60 /* Cargo TransportationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A484EC8B256C1CE600393E60 /* Cargo Transportation */ = {
+			isa = PBXGroup;
+			children = (
+				A484EC8C256C1CE600393E60 /* AppDelegate.swift */,
+				A484EC8E256C1CE600393E60 /* SceneDelegate.swift */,
+				A484EC90256C1CE600393E60 /* ViewController.swift */,
+				A484EC92256C1CE600393E60 /* Main.storyboard */,
+				A484EC98256C1CE900393E60 /* Assets.xcassets */,
+				A484EC9A256C1CE900393E60 /* LaunchScreen.storyboard */,
+				A484EC9D256C1CE900393E60 /* Info.plist */,
+				A484EC95256C1CE600393E60 /* Cargo_Transportation.xcdatamodeld */,
+			);
+			path = "Cargo Transportation";
+			sourceTree = "<group>";
+		};
+		A484ECA5256C1CE900393E60 /* Cargo TransportationTests */ = {
+			isa = PBXGroup;
+			children = (
+				A484ECA6256C1CE900393E60 /* Cargo_TransportationTests.swift */,
+				A484ECA8256C1CE900393E60 /* Info.plist */,
+			);
+			path = "Cargo TransportationTests";
+			sourceTree = "<group>";
+		};
+		A484ECB0256C1CE900393E60 /* Cargo TransportationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A484ECB1256C1CE900393E60 /* Cargo_TransportationUITests.swift */,
+				A484ECB3256C1CE900393E60 /* Info.plist */,
+			);
+			path = "Cargo TransportationUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A484EC88256C1CE600393E60 /* Cargo Transportation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A484ECB6256C1CE900393E60 /* Build configuration list for PBXNativeTarget "Cargo Transportation" */;
+			buildPhases = (
+				A484EC85256C1CE600393E60 /* Sources */,
+				A484EC86256C1CE600393E60 /* Frameworks */,
+				A484EC87256C1CE600393E60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cargo Transportation";
+			productName = "Cargo Transportation";
+			productReference = A484EC89256C1CE600393E60 /* Cargo Transportation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A484ECA1256C1CE900393E60 /* Cargo TransportationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A484ECB9256C1CE900393E60 /* Build configuration list for PBXNativeTarget "Cargo TransportationTests" */;
+			buildPhases = (
+				A484EC9E256C1CE900393E60 /* Sources */,
+				A484EC9F256C1CE900393E60 /* Frameworks */,
+				A484ECA0256C1CE900393E60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A484ECA4256C1CE900393E60 /* PBXTargetDependency */,
+			);
+			name = "Cargo TransportationTests";
+			productName = "Cargo TransportationTests";
+			productReference = A484ECA2256C1CE900393E60 /* Cargo TransportationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A484ECAC256C1CE900393E60 /* Cargo TransportationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A484ECBC256C1CE900393E60 /* Build configuration list for PBXNativeTarget "Cargo TransportationUITests" */;
+			buildPhases = (
+				A484ECA9256C1CE900393E60 /* Sources */,
+				A484ECAA256C1CE900393E60 /* Frameworks */,
+				A484ECAB256C1CE900393E60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A484ECAF256C1CE900393E60 /* PBXTargetDependency */,
+			);
+			name = "Cargo TransportationUITests";
+			productName = "Cargo TransportationUITests";
+			productReference = A484ECAD256C1CE900393E60 /* Cargo TransportationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A484EC81256C1CE600393E60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					A484EC88256C1CE600393E60 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					A484ECA1256C1CE900393E60 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = A484EC88256C1CE600393E60;
+					};
+					A484ECAC256C1CE900393E60 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = A484EC88256C1CE600393E60;
+					};
+				};
+			};
+			buildConfigurationList = A484EC84256C1CE600393E60 /* Build configuration list for PBXProject "Cargo Transportation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A484EC80256C1CE600393E60;
+			productRefGroup = A484EC8A256C1CE600393E60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A484EC88256C1CE600393E60 /* Cargo Transportation */,
+				A484ECA1256C1CE900393E60 /* Cargo TransportationTests */,
+				A484ECAC256C1CE900393E60 /* Cargo TransportationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A484EC87256C1CE600393E60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A484EC9C256C1CE900393E60 /* LaunchScreen.storyboard in Resources */,
+				A484EC99256C1CE900393E60 /* Assets.xcassets in Resources */,
+				A484EC94256C1CE600393E60 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A484ECA0256C1CE900393E60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A484ECAB256C1CE900393E60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A484EC85256C1CE600393E60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A484EC97256C1CE600393E60 /* Cargo_Transportation.xcdatamodeld in Sources */,
+				A484EC91256C1CE600393E60 /* ViewController.swift in Sources */,
+				A484EC8D256C1CE600393E60 /* AppDelegate.swift in Sources */,
+				A484EC8F256C1CE600393E60 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A484EC9E256C1CE900393E60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A484ECA7256C1CE900393E60 /* Cargo_TransportationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A484ECA9256C1CE900393E60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A484ECB2256C1CE900393E60 /* Cargo_TransportationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A484ECA4256C1CE900393E60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A484EC88256C1CE600393E60 /* Cargo Transportation */;
+			targetProxy = A484ECA3256C1CE900393E60 /* PBXContainerItemProxy */;
+		};
+		A484ECAF256C1CE900393E60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A484EC88256C1CE600393E60 /* Cargo Transportation */;
+			targetProxy = A484ECAE256C1CE900393E60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A484EC92256C1CE600393E60 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A484EC93256C1CE600393E60 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A484EC9A256C1CE900393E60 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A484EC9B256C1CE900393E60 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A484ECB4256C1CE900393E60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A484ECB5256C1CE900393E60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A484ECB7256C1CE900393E60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 663DYMD95T;
+				INFOPLIST_FILE = "Cargo Transportation/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cargo-Transportation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A484ECB8256C1CE900393E60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 663DYMD95T;
+				INFOPLIST_FILE = "Cargo Transportation/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cargo-Transportation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A484ECBA256C1CE900393E60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 663DYMD95T;
+				INFOPLIST_FILE = "Cargo TransportationTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cargo-TransportationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cargo Transportation.app/Cargo Transportation";
+			};
+			name = Debug;
+		};
+		A484ECBB256C1CE900393E60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 663DYMD95T;
+				INFOPLIST_FILE = "Cargo TransportationTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cargo-TransportationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cargo Transportation.app/Cargo Transportation";
+			};
+			name = Release;
+		};
+		A484ECBD256C1CE900393E60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 663DYMD95T;
+				INFOPLIST_FILE = "Cargo TransportationUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cargo-TransportationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cargo Transportation";
+			};
+			name = Debug;
+		};
+		A484ECBE256C1CE900393E60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 663DYMD95T;
+				INFOPLIST_FILE = "Cargo TransportationUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cargo-TransportationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cargo Transportation";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A484EC84256C1CE600393E60 /* Build configuration list for PBXProject "Cargo Transportation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A484ECB4256C1CE900393E60 /* Debug */,
+				A484ECB5256C1CE900393E60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A484ECB6256C1CE900393E60 /* Build configuration list for PBXNativeTarget "Cargo Transportation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A484ECB7256C1CE900393E60 /* Debug */,
+				A484ECB8256C1CE900393E60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A484ECB9256C1CE900393E60 /* Build configuration list for PBXNativeTarget "Cargo TransportationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A484ECBA256C1CE900393E60 /* Debug */,
+				A484ECBB256C1CE900393E60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A484ECBC256C1CE900393E60 /* Build configuration list for PBXNativeTarget "Cargo TransportationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A484ECBD256C1CE900393E60 /* Debug */,
+				A484ECBE256C1CE900393E60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A484EC95256C1CE600393E60 /* Cargo_Transportation.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A484EC96256C1CE600393E60 /* Cargo_Transportation.xcdatamodel */,
+			);
+			currentVersion = A484EC96256C1CE600393E60 /* Cargo_Transportation.xcdatamodel */;
+			path = Cargo_Transportation.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A484EC81256C1CE600393E60 /* Project object */;
+}
