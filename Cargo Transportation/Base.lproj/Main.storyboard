@@ -71,15 +71,29 @@
             </objects>
             <point key="canvasLocation" x="2189.8550724637685" y="-24.107142857142858"/>
         </scene>
-        <!--NewsViewController-->
+        <!--HomeViewController-->
         <scene sceneID="DBg-kR-5s1">
             <objects>
-                <viewController title="NewsViewController" id="TeC-xK-M6a" customClass="HomeViewController" customModule="Cargo_Transportation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HomeViewController" id="TeC-xK-M6a" customClass="HomeViewController" customModule="Cargo_Transportation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ZU-J4-27R">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQi-g6-W1t">
+                                <rect key="frame" x="186" y="438" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JBd-cR-ZZ1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JBd-cR-ZZ1" firstAttribute="trailing" secondItem="rQi-g6-W1t" secondAttribute="trailing" constant="186" id="0cc-A9-8NF"/>
+                            <constraint firstItem="rQi-g6-W1t" firstAttribute="top" secondItem="JBd-cR-ZZ1" secondAttribute="top" constant="350" id="RGY-hc-5XQ"/>
+                            <constraint firstItem="rQi-g6-W1t" firstAttribute="leading" secondItem="JBd-cR-ZZ1" secondAttribute="leading" constant="186" id="wBW-zD-oMf"/>
+                            <constraint firstItem="JBd-cR-ZZ1" firstAttribute="bottom" secondItem="rQi-g6-W1t" secondAttribute="bottom" constant="354" id="z9V-fu-5KW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rBr-zl-DFG"/>
                 </viewController>

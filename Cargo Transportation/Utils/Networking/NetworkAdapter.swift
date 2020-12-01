@@ -106,7 +106,7 @@ enum Result<T, E> {
 
 
 /// GeneralRepositoryComplition - Repository response result typealias
-typealias GeneralNetworkComplition<R, E> = (Result<R, E>) -> Void
+typealias GeneralNetworkCompletion<R, E> = (Result<R, E>) -> Void
 
 /// GeneralCompletion - Repository response result typealias with predefined failure types - Error
 typealias GeneralCompletion<R> = (Result<R, Error?>) -> Void

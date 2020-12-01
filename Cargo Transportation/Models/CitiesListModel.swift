@@ -1,5 +1,5 @@
 //
-//  CitiesList.swift
+//  CitiesListModel.swift
 //  Cargo Transportation
 //
 //  Created by Alex Bezkopylnyi on 29.11.2020.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct CitiesList: Codable {
+struct CitiesListModel: Codable {
     let status: Bool
     let message: String
-    let data: [CitiesListData]
+    let data: [CitiesListDataModel]
 }
 
-struct CitiesListData: Codable {
+struct CitiesListDataModel: Codable {
     let id: String
     let name: String
     let regionID: String

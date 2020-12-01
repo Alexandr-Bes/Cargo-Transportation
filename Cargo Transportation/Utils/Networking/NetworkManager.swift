@@ -53,7 +53,7 @@ class NetworkManager {
         return mapObject
     }
     
-    func get(completion: @escaping GeneralCompletion<RegionList>) {
+    func get(completion: @escaping GeneralCompletion<RegionListModel>) {
         guard let url = URL(string: "https://www.delivery-auto.com/api/v4/Public/GetRegionList?culture=ru-RU&country=1") else {
             completion(.failure(NetworkError.general(Constants.NoURLErrorMessage)))
             return
@@ -62,7 +62,7 @@ class NetworkManager {
         networkAdapter.request(url: url, httpMethod: .get, encoding: .JSON, requestParameters: nil, requestHeaders: nil) { (response: NetworkResponse) in
             
             response.analysis(success: { (data) in
-                guard let responseObject = try? RegionList.decode(data: data) else {
+                guard let responseObject = try? RegionListModel.decode(data: data) else {
                     let errorString = Constants.AuthNetwork.parsingAuthSessionErrorMessage
                     completion(.failure(NetworkError.general(errorString)))
                     return
@@ -103,8 +103,32 @@ class NetworkManager {
         }
     }
 
-    func searchRepresentations(by longitude: String, and latitude: String, completion: @escaping GeneralCompletion<NewsModel>) {
-        let ss = "api/v4/Public/GetFindWarehouses?culture={culture}&Longitude={Longitude}&Latitude={Latitude}&count={count}&includeRegionalCenters={includeRegionalCenters}&CityId={CityId}"
+    func searchRepresentations(with longitude: Double, and latitude: Double, completion: @escaping GeneralCompletion<SearchByCoordinatesModel>) {
+//        let ds =  "api/v4/Public/GetFindWarehouses?culture={culture}&Longitude={Longitude}&Latitude={Latitude}&count={count}&includeRegionalCenters={includeRegionalCenters}&CityId={CityId}"
+        
+        guard let url = URL(string: "https://www.delivery-auto.com/api/v4/Public/GetFindWarehouses?culture=ru-RU&Longitude=\(longitude)&Latitude=\(latitude)&count=10") else {
+            completion(.failure(NetworkError.general(Constants.NoURLErrorMessage)))
+            return
+        }
+        
+        networkAdapter.request(url: url, httpMethod: .get, encoding: .JSON, requestParameters: nil, requestHeaders: nil) { (response: NetworkResponse) in
+            
+            response.analysis(success: { (data) in
+                guard let responseObject = try? SearchByCoordinatesModel.decode(data: data) else {
+                    let errorString = Constants.AuthNetwork.parsingAuthSessionErrorMessage
+                    completion(.failure(NetworkError.general(errorString)))
+                    return
+                }
+                completion(.success(responseObject))
+        
+            }, errors: { (error) in
+                completion(.failure(NetworkError.general("Error block")))
+                
+            }, failure: { (errorString) in
+                completion(.failure(NetworkError.general(errorString)))
+            })
+        }
     }
+    
     
 }

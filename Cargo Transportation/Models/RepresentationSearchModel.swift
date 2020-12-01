@@ -1,5 +1,5 @@
 //
-//  RepresentationSearch.swift
+//  RepresentationSearchModel.swift
 //  Cargo Transportation
 //
 //  Created by Alex Bezkopylnyi on 29.11.2020.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct RepresentationSearch: Codable {
+struct RepresentationSearchModel: Codable {
     let status: Bool
     let message: String
-    let data: [RepresentationSearchData]
+    let data: [RepresentationSearchDataModel]
 }
 
-struct RepresentationSearchData: Codable {
+struct RepresentationSearchDataModel: Codable {
     let id, name: String
     let distance, longitude, latitude, longitudeCorrect: Double
     let latitudeCorrect: Double

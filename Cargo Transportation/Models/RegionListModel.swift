@@ -1,5 +1,5 @@
 //
-//  RegionList.swift
+//  RegionListModel.swift
 //  Cargo Transportation
 //
 //  Created by Alex Bezkopylnyi on 28.11.2020.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct RegionList: Codable {
+struct RegionListModel: Codable {
     let status: Bool
     let message: String
-    let data: [RegionListData]
+    let data: [RegionListDataModel]
 }
 
-struct RegionListData: Codable {
+struct RegionListDataModel: Codable {
     let id: Int
     let name: String
     let externalId: String

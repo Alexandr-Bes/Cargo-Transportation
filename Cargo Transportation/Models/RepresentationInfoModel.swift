@@ -1,5 +1,5 @@
 //
-//  RepresentationInfo.swift
+//  RepresentationInfoModel.swift
 //  Cargo Transportation
 //
 //  Created by Alex Bezkopylnyi on 29.11.2020.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct RepresentationInfo: Codable {
+struct RepresentationInfoModel: Codable {
     let status: Bool
     let message: String
-    let data: [RepresentationInfoData]
+    let data: [RepresentationInfoDataModel]
 }
 
-struct RepresentationInfoData: Codable {
+struct RepresentationInfoDataModel: Codable {
     let id, name, address, operatingTime: String
     let phone, emailStorage: String
     let latitude, longitude, latitudeCorrect, longitudeCorrect: Double

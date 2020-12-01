@@ -56,7 +56,7 @@ class LocationService : NSObject, LocationServiceAdapter {
             return
         }
         
-        requestWhenInUseAuthorization {[weak self] (status) in
+        requestWhenInUseAuthorization { [weak self] (status) in
             if status == .authorizedAlways || status == .authorizedWhenInUse {
                 self?.locationManager.startUpdatingLocation()
                 

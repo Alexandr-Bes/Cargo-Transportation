@@ -30,11 +30,11 @@
 		A44091062572E0D000EDBDBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091052572E0D000EDBDBC /* Constants.swift */; };
 		A440910E2572E4CB00EDBDBC /* SuccessLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440910D2572E4CB00EDBDBC /* SuccessLogin.swift */; };
 		A44091132572E56000EDBDBC /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091122572E56000EDBDBC /* Codable.swift */; };
-		A44091182572E87300EDBDBC /* RegionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091172572E87300EDBDBC /* RegionList.swift */; };
-		A440911D257312E900EDBDBC /* CitiesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440911C257312E900EDBDBC /* CitiesList.swift */; };
-		A440912225731ABA00EDBDBC /* RepresentationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440912125731ABA00EDBDBC /* RepresentationList.swift */; };
-		A440912725731D7400EDBDBC /* RepresentationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440912625731D7400EDBDBC /* RepresentationInfo.swift */; };
-		A440912C25731F9700EDBDBC /* RepresentationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440912B25731F9700EDBDBC /* RepresentationSearch.swift */; };
+		A44091182572E87300EDBDBC /* RegionListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091172572E87300EDBDBC /* RegionListModel.swift */; };
+		A440911D257312E900EDBDBC /* CitiesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440911C257312E900EDBDBC /* CitiesListModel.swift */; };
+		A440912225731ABA00EDBDBC /* RepresentationListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440912125731ABA00EDBDBC /* RepresentationListModel.swift */; };
+		A440912725731D7400EDBDBC /* RepresentationInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440912625731D7400EDBDBC /* RepresentationInfoModel.swift */; };
+		A440912C25731F9700EDBDBC /* RepresentationSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440912B25731F9700EDBDBC /* RepresentationSearchModel.swift */; };
 		A44091502575A5BC00EDBDBC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440914F2575A5BC00EDBDBC /* NewsViewController.swift */; };
 		A44091552575A5CA00EDBDBC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091542575A5CA00EDBDBC /* HomeViewController.swift */; };
 		A440915A2575A5D700EDBDBC /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091592575A5D700EDBDBC /* DeliveryViewController.swift */; };
@@ -54,6 +54,10 @@
 		A484EC9C256C1CE900393E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A484EC9A256C1CE900393E60 /* LaunchScreen.storyboard */; };
 		A484ECA7256C1CE900393E60 /* Cargo_TransportationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484ECA6256C1CE900393E60 /* Cargo_TransportationTests.swift */; };
 		A484ECB2256C1CE900393E60 /* Cargo_TransportationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484ECB1256C1CE900393E60 /* Cargo_TransportationUITests.swift */; };
+		A4E0E50C2576F2F4005234D4 /* MainAppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0E50B2576F2F4005234D4 /* MainAppRepository.swift */; };
+		A4E0E5112576F310005234D4 /* MainAppRepositoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0E5102576F310005234D4 /* MainAppRepositoryProtocols.swift */; };
+		A4E0E5162576F3D4005234D4 /* MainAppRepository+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0E5152576F3D4005234D4 /* MainAppRepository+Location.swift */; };
+		A4E0E51B2576FC2E005234D4 /* SearchByCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0E51A2576FC2E005234D4 /* SearchByCoordinatesModel.swift */; };
 		A701AB9BBC798B81D7C7EDFA /* Pods_Cargo_Transportation_Cargo_TransportationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79239BC9833291152344252 /* Pods_Cargo_Transportation_Cargo_TransportationUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,11 +104,11 @@
 		A44091052572E0D000EDBDBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A440910D2572E4CB00EDBDBC /* SuccessLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessLogin.swift; sourceTree = "<group>"; };
 		A44091122572E56000EDBDBC /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
-		A44091172572E87300EDBDBC /* RegionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionList.swift; sourceTree = "<group>"; };
-		A440911C257312E900EDBDBC /* CitiesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesList.swift; sourceTree = "<group>"; };
-		A440912125731ABA00EDBDBC /* RepresentationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationList.swift; sourceTree = "<group>"; };
-		A440912625731D7400EDBDBC /* RepresentationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationInfo.swift; sourceTree = "<group>"; };
-		A440912B25731F9700EDBDBC /* RepresentationSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationSearch.swift; sourceTree = "<group>"; };
+		A44091172572E87300EDBDBC /* RegionListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListModel.swift; sourceTree = "<group>"; };
+		A440911C257312E900EDBDBC /* CitiesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListModel.swift; sourceTree = "<group>"; };
+		A440912125731ABA00EDBDBC /* RepresentationListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationListModel.swift; sourceTree = "<group>"; };
+		A440912625731D7400EDBDBC /* RepresentationInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationInfoModel.swift; sourceTree = "<group>"; };
+		A440912B25731F9700EDBDBC /* RepresentationSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationSearchModel.swift; sourceTree = "<group>"; };
 		A440914F2575A5BC00EDBDBC /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A44091542575A5CA00EDBDBC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A44091592575A5D700EDBDBC /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,10 @@
 		A484ECAD256C1CE900393E60 /* Cargo TransportationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cargo TransportationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A484ECB1256C1CE900393E60 /* Cargo_TransportationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cargo_TransportationUITests.swift; sourceTree = "<group>"; };
 		A484ECB3256C1CE900393E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4E0E50B2576F2F4005234D4 /* MainAppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppRepository.swift; sourceTree = "<group>"; };
+		A4E0E5102576F310005234D4 /* MainAppRepositoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppRepositoryProtocols.swift; sourceTree = "<group>"; };
+		A4E0E5152576F3D4005234D4 /* MainAppRepository+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainAppRepository+Location.swift"; sourceTree = "<group>"; };
+		A4E0E51A2576FC2E005234D4 /* SearchByCoordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchByCoordinatesModel.swift; sourceTree = "<group>"; };
 		A79239BC9833291152344252 /* Pods_Cargo_Transportation_Cargo_TransportationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cargo_Transportation_Cargo_TransportationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1ED2214CBAE52C05E97C20 /* Pods-Cargo Transportation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo Transportation.release.xcconfig"; path = "Target Support Files/Pods-Cargo Transportation/Pods-Cargo Transportation.release.xcconfig"; sourceTree = "<group>"; };
 		BF3CC9A9E1DFC6008DEC4125 /* Pods-Cargo Transportation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo Transportation.debug.xcconfig"; path = "Target Support Files/Pods-Cargo Transportation/Pods-Cargo Transportation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,14 +202,15 @@
 		A44090582572CDC800EDBDBC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A44091872576E8A600EDBDBC /* Location */,
 				A44090E82572D7EA00EDBDBC /* Networking */,
+				A440909D2572D1E300EDBDBC /* Local Storage */,
 				A44090A62572D37600EDBDBC /* Endpoints.swift */,
 				A44091052572E0D000EDBDBC /* Constants.swift */,
-				A440909D2572D1E300EDBDBC /* Local Storage */,
-				A44090F62572DBEA00EDBDBC /* LocationServiceAdapter.swift */,
 				A44091752575B9BB00EDBDBC /* AppDateFormatter.swift */,
-				A440917A2575BF3F00EDBDBC /* LocationManager.swift */,
-				A440917F2575C20000EDBDBC /* LocationService.swift */,
+				A4E0E50B2576F2F4005234D4 /* MainAppRepository.swift */,
+				A4E0E5152576F3D4005234D4 /* MainAppRepository+Location.swift */,
+				A4E0E5102576F310005234D4 /* MainAppRepositoryProtocols.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -239,11 +248,12 @@
 				A44090D82572D48B00EDBDBC /* LoginModel.swift */,
 				A44090FB2572DC1000EDBDBC /* UserLocation.swift */,
 				A440910D2572E4CB00EDBDBC /* SuccessLogin.swift */,
-				A44091172572E87300EDBDBC /* RegionList.swift */,
-				A440911C257312E900EDBDBC /* CitiesList.swift */,
-				A440912125731ABA00EDBDBC /* RepresentationList.swift */,
-				A440912625731D7400EDBDBC /* RepresentationInfo.swift */,
-				A440912B25731F9700EDBDBC /* RepresentationSearch.swift */,
+				A44091172572E87300EDBDBC /* RegionListModel.swift */,
+				A440911C257312E900EDBDBC /* CitiesListModel.swift */,
+				A440912125731ABA00EDBDBC /* RepresentationListModel.swift */,
+				A440912625731D7400EDBDBC /* RepresentationInfoModel.swift */,
+				A440912B25731F9700EDBDBC /* RepresentationSearchModel.swift */,
+				A4E0E51A2576FC2E005234D4 /* SearchByCoordinatesModel.swift */,
 				A44091702575B1AC00EDBDBC /* NewsModel.swift */,
 			);
 			path = Models;
@@ -301,6 +311,16 @@
 				A440915E2575A5E300EDBDBC /* FeedbackViewController.swift */,
 			);
 			path = Feedback;
+			sourceTree = "<group>";
+		};
+		A44091872576E8A600EDBDBC /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				A44090F62572DBEA00EDBDBC /* LocationServiceAdapter.swift */,
+				A440917A2575BF3F00EDBDBC /* LocationManager.swift */,
+				A440917F2575C20000EDBDBC /* LocationService.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		A484EC80256C1CE600393E60 = {
@@ -617,26 +637,28 @@
 				A440907B2572CEEE00EDBDBC /* AlertController+extension.swift in Sources */,
 				A44091802575C20000EDBDBC /* LocationService.swift in Sources */,
 				A484EC97256C1CE600393E60 /* Cargo_Transportation.xcdatamodeld in Sources */,
-				A440912725731D7400EDBDBC /* RepresentationInfo.swift in Sources */,
+				A440912725731D7400EDBDBC /* RepresentationInfoModel.swift in Sources */,
 				A484EC91256C1CE600393E60 /* ViewController.swift in Sources */,
+				A4E0E51B2576FC2E005234D4 /* SearchByCoordinatesModel.swift in Sources */,
 				A44090A72572D37600EDBDBC /* Endpoints.swift in Sources */,
 				A44090D92572D48B00EDBDBC /* LoginModel.swift in Sources */,
 				A44091062572E0D000EDBDBC /* Constants.swift in Sources */,
 				A44091642575A7D600EDBDBC /* BaseNavigationController.swift in Sources */,
 				A440915A2575A5D700EDBDBC /* DeliveryViewController.swift in Sources */,
-				A44091182572E87300EDBDBC /* RegionList.swift in Sources */,
+				A44091182572E87300EDBDBC /* RegionListModel.swift in Sources */,
 				A44090EA2572DB9900EDBDBC /* NetworkAdapter.swift in Sources */,
-				A440911D257312E900EDBDBC /* CitiesList.swift in Sources */,
-				A440912225731ABA00EDBDBC /* RepresentationList.swift in Sources */,
+				A440911D257312E900EDBDBC /* CitiesListModel.swift in Sources */,
+				A440912225731ABA00EDBDBC /* RepresentationListModel.swift in Sources */,
 				A44091012572DF0500EDBDBC /* NSObject+ext.swift in Sources */,
 				A484EC8D256C1CE600393E60 /* AppDelegate.swift in Sources */,
-				A440912C25731F9700EDBDBC /* RepresentationSearch.swift in Sources */,
+				A440912C25731F9700EDBDBC /* RepresentationSearchModel.swift in Sources */,
 				A484EC8F256C1CE600393E60 /* SceneDelegate.swift in Sources */,
 				A44091762575B9BB00EDBDBC /* AppDateFormatter.swift in Sources */,
 				A44091712575B1AC00EDBDBC /* NewsModel.swift in Sources */,
 				A44090942572D17400EDBDBC /* NibInstantiatable.swift in Sources */,
 				A440908A2572CFAC00EDBDBC /* String+extension.swift in Sources */,
 				A440915F2575A5E300EDBDBC /* FeedbackViewController.swift in Sources */,
+				A4E0E5112576F310005234D4 /* MainAppRepositoryProtocols.swift in Sources */,
 				A44090E12572D7E200EDBDBC /* NetworkManager.swift in Sources */,
 				A44090FC2572DC1000EDBDBC /* UserLocation.swift in Sources */,
 				A440910E2572E4CB00EDBDBC /* SuccessLogin.swift in Sources */,
@@ -649,6 +671,8 @@
 				A440908F2572D02000EDBDBC /* UITableViewCell+Reusable.swift in Sources */,
 				A44091552575A5CA00EDBDBC /* HomeViewController.swift in Sources */,
 				A44090F22572DBB900EDBDBC /* AlamofireNetworkAdapter.swift in Sources */,
+				A4E0E50C2576F2F4005234D4 /* MainAppRepository.swift in Sources */,
+				A4E0E5162576F3D4005234D4 /* MainAppRepository+Location.swift in Sources */,
 				A44090712572CE9300EDBDBC /* Helper.swift in Sources */,
 				A44090992572D1CA00EDBDBC /* LocalStorageAdapter.swift in Sources */,
 				A44091502575A5BC00EDBDBC /* NewsViewController.swift in Sources */,

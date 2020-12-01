@@ -1,5 +1,5 @@
 //
-//  RepresentationList.swift
+//  RepresentationListModel.swift
 //  Cargo Transportation
 //
 //  Created by Alex Bezkopylnyi on 29.11.2020.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct RepresentationList: Codable {
+struct RepresentationListModel: Codable {
     let status: Bool
     let message: String
-    let data: [RepresentationListData]
+    let data: [RepresentationListDataModel]
 }
 
-struct RepresentationListData: Codable {
+struct RepresentationListDataModel: Codable {
     let id: String
     let name: String
     let address: String
