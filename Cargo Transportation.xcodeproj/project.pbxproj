@@ -35,6 +35,16 @@
 		A440912225731ABA00EDBDBC /* RepresentationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440912125731ABA00EDBDBC /* RepresentationList.swift */; };
 		A440912725731D7400EDBDBC /* RepresentationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440912625731D7400EDBDBC /* RepresentationInfo.swift */; };
 		A440912C25731F9700EDBDBC /* RepresentationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440912B25731F9700EDBDBC /* RepresentationSearch.swift */; };
+		A44091502575A5BC00EDBDBC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440914F2575A5BC00EDBDBC /* NewsViewController.swift */; };
+		A44091552575A5CA00EDBDBC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091542575A5CA00EDBDBC /* HomeViewController.swift */; };
+		A440915A2575A5D700EDBDBC /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091592575A5D700EDBDBC /* DeliveryViewController.swift */; };
+		A440915F2575A5E300EDBDBC /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440915E2575A5E300EDBDBC /* FeedbackViewController.swift */; };
+		A44091642575A7D600EDBDBC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091632575A7D600EDBDBC /* BaseNavigationController.swift */; };
+		A44091692575AB2000EDBDBC /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091682575AB2000EDBDBC /* NewsTableViewCell.swift */; };
+		A44091712575B1AC00EDBDBC /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091702575B1AC00EDBDBC /* NewsModel.swift */; };
+		A44091762575B9BB00EDBDBC /* AppDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091752575B9BB00EDBDBC /* AppDateFormatter.swift */; };
+		A440917B2575BF3F00EDBDBC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440917A2575BF3F00EDBDBC /* LocationManager.swift */; };
+		A44091802575C20000EDBDBC /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440917F2575C20000EDBDBC /* LocationService.swift */; };
 		A484EC8D256C1CE600393E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC8C256C1CE600393E60 /* AppDelegate.swift */; };
 		A484EC8F256C1CE600393E60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC8E256C1CE600393E60 /* SceneDelegate.swift */; };
 		A484EC91256C1CE600393E60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC90256C1CE600393E60 /* ViewController.swift */; };
@@ -95,6 +105,16 @@
 		A440912125731ABA00EDBDBC /* RepresentationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationList.swift; sourceTree = "<group>"; };
 		A440912625731D7400EDBDBC /* RepresentationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationInfo.swift; sourceTree = "<group>"; };
 		A440912B25731F9700EDBDBC /* RepresentationSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationSearch.swift; sourceTree = "<group>"; };
+		A440914F2575A5BC00EDBDBC /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		A44091542575A5CA00EDBDBC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A44091592575A5D700EDBDBC /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
+		A440915E2575A5E300EDBDBC /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		A44091632575A7D600EDBDBC /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		A44091682575AB2000EDBDBC /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		A44091702575B1AC00EDBDBC /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		A44091752575B9BB00EDBDBC /* AppDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDateFormatter.swift; sourceTree = "<group>"; };
+		A440917A2575BF3F00EDBDBC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A440917F2575C20000EDBDBC /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A484EC89256C1CE600393E60 /* Cargo Transportation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cargo Transportation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A484EC8C256C1CE600393E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A484EC8E256C1CE600393E60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,15 +199,19 @@
 				A44091052572E0D000EDBDBC /* Constants.swift */,
 				A440909D2572D1E300EDBDBC /* Local Storage */,
 				A44090F62572DBEA00EDBDBC /* LocationServiceAdapter.swift */,
+				A44091752575B9BB00EDBDBC /* AppDateFormatter.swift */,
+				A440917A2575BF3F00EDBDBC /* LocationManager.swift */,
+				A440917F2575C20000EDBDBC /* LocationService.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		A44090592572CDD800EDBDBC /* View */ = {
+		A44090592572CDD800EDBDBC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A44091682575AB2000EDBDBC /* NewsTableViewCell.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A440905A2572CDF300EDBDBC /* App */ = {
@@ -220,6 +244,7 @@
 				A440912125731ABA00EDBDBC /* RepresentationList.swift */,
 				A440912625731D7400EDBDBC /* RepresentationInfo.swift */,
 				A440912B25731F9700EDBDBC /* RepresentationSearch.swift */,
+				A44091702575B1AC00EDBDBC /* NewsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,6 +257,50 @@
 				A44090F12572DBB900EDBDBC /* AlamofireNetworkAdapter.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		A440914A2575A55C00EDBDBC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A440914E2575A58B00EDBDBC /* Feedback */,
+				A440914D2575A57900EDBDBC /* Delivery */,
+				A440914C2575A57300EDBDBC /* News */,
+				A440914B2575A56500EDBDBC /* Home */,
+				A44091632575A7D600EDBDBC /* BaseNavigationController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A440914B2575A56500EDBDBC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A44091542575A5CA00EDBDBC /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A440914C2575A57300EDBDBC /* News */ = {
+			isa = PBXGroup;
+			children = (
+				A440914F2575A5BC00EDBDBC /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		A440914D2575A57900EDBDBC /* Delivery */ = {
+			isa = PBXGroup;
+			children = (
+				A44091592575A5D700EDBDBC /* DeliveryViewController.swift */,
+			);
+			path = Delivery;
+			sourceTree = "<group>";
+		};
+		A440914E2575A58B00EDBDBC /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				A440915E2575A5E300EDBDBC /* FeedbackViewController.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		A484EC80256C1CE600393E60 = {
@@ -259,9 +328,10 @@
 		A484EC8B256C1CE600393E60 /* Cargo Transportation */ = {
 			isa = PBXGroup;
 			children = (
+				A440914A2575A55C00EDBDBC /* ViewControllers */,
 				A44090D72572D47D00EDBDBC /* Models */,
 				A440905A2572CDF300EDBDBC /* App */,
-				A44090592572CDD800EDBDBC /* View */,
+				A44090592572CDD800EDBDBC /* Views */,
 				A44090582572CDC800EDBDBC /* Utils */,
 				A44090542572CDA300EDBDBC /* Extensions */,
 				A484EC90256C1CE600393E60 /* ViewController.swift */,
@@ -545,12 +615,15 @@
 			files = (
 				A44090852572CF8700EDBDBC /* UIStoryboard+extension.swift in Sources */,
 				A440907B2572CEEE00EDBDBC /* AlertController+extension.swift in Sources */,
+				A44091802575C20000EDBDBC /* LocationService.swift in Sources */,
 				A484EC97256C1CE600393E60 /* Cargo_Transportation.xcdatamodeld in Sources */,
 				A440912725731D7400EDBDBC /* RepresentationInfo.swift in Sources */,
 				A484EC91256C1CE600393E60 /* ViewController.swift in Sources */,
 				A44090A72572D37600EDBDBC /* Endpoints.swift in Sources */,
 				A44090D92572D48B00EDBDBC /* LoginModel.swift in Sources */,
 				A44091062572E0D000EDBDBC /* Constants.swift in Sources */,
+				A44091642575A7D600EDBDBC /* BaseNavigationController.swift in Sources */,
+				A440915A2575A5D700EDBDBC /* DeliveryViewController.swift in Sources */,
 				A44091182572E87300EDBDBC /* RegionList.swift in Sources */,
 				A44090EA2572DB9900EDBDBC /* NetworkAdapter.swift in Sources */,
 				A440911D257312E900EDBDBC /* CitiesList.swift in Sources */,
@@ -559,20 +632,27 @@
 				A484EC8D256C1CE600393E60 /* AppDelegate.swift in Sources */,
 				A440912C25731F9700EDBDBC /* RepresentationSearch.swift in Sources */,
 				A484EC8F256C1CE600393E60 /* SceneDelegate.swift in Sources */,
+				A44091762575B9BB00EDBDBC /* AppDateFormatter.swift in Sources */,
+				A44091712575B1AC00EDBDBC /* NewsModel.swift in Sources */,
 				A44090942572D17400EDBDBC /* NibInstantiatable.swift in Sources */,
 				A440908A2572CFAC00EDBDBC /* String+extension.swift in Sources */,
+				A440915F2575A5E300EDBDBC /* FeedbackViewController.swift in Sources */,
 				A44090E12572D7E200EDBDBC /* NetworkManager.swift in Sources */,
 				A44090FC2572DC1000EDBDBC /* UserLocation.swift in Sources */,
 				A440910E2572E4CB00EDBDBC /* SuccessLogin.swift in Sources */,
 				A440909F2572D1FE00EDBDBC /* UserDefaultsLocalStorageAdapter.swift in Sources */,
 				A44090612572CE3700EDBDBC /* AppDelegateProvider.swift in Sources */,
+				A44091692575AB2000EDBDBC /* NewsTableViewCell.swift in Sources */,
 				A44091132572E56000EDBDBC /* Codable.swift in Sources */,
 				A44090F72572DBEA00EDBDBC /* LocationServiceAdapter.swift in Sources */,
 				A44090802572CF5000EDBDBC /* UIViewController+Ext.swift in Sources */,
 				A440908F2572D02000EDBDBC /* UITableViewCell+Reusable.swift in Sources */,
+				A44091552575A5CA00EDBDBC /* HomeViewController.swift in Sources */,
 				A44090F22572DBB900EDBDBC /* AlamofireNetworkAdapter.swift in Sources */,
 				A44090712572CE9300EDBDBC /* Helper.swift in Sources */,
 				A44090992572D1CA00EDBDBC /* LocalStorageAdapter.swift in Sources */,
+				A44091502575A5BC00EDBDBC /* NewsViewController.swift in Sources */,
+				A440917B2575BF3F00EDBDBC /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

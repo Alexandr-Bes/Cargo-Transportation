@@ -53,7 +53,7 @@ class NetworkManager {
         return mapObject
     }
     
-    func get(completion: @escaping GeneralCompletion<RegionList>) { // MODEL
+    func get(completion: @escaping GeneralCompletion<RegionList>) {
         guard let url = URL(string: "https://www.delivery-auto.com/api/v4/Public/GetRegionList?culture=ru-RU&country=1") else {
             completion(.failure(NetworkError.general(Constants.NoURLErrorMessage)))
             return
@@ -76,6 +76,35 @@ class NetworkManager {
                 completion(.failure(NetworkError.general(errorString)))
             })
         }
-        
     }
+    
+    func downloadNews(completion: @escaping GeneralCompletion<NewsModel>) {
+        guard let url = URL(string: "https://www.delivery-auto.com/api/v4/Public/GetNews?culture=ru-RU&count=20&page=1") else {
+            completion(.failure(NetworkError.general(Constants.NoURLErrorMessage)))
+            return
+        }
+        
+        networkAdapter.request(url: url, httpMethod: .get, encoding: .JSON, requestParameters: nil, requestHeaders: nil) { (response: NetworkResponse) in
+            
+            response.analysis(success: { (data) in
+                guard let responseObject = try? NewsModel.decode(data: data) else {
+                    let errorString = Constants.AuthNetwork.parsingAuthSessionErrorMessage
+                    completion(.failure(NetworkError.general(errorString)))
+                    return
+                }
+                completion(.success(responseObject))
+        
+            }, errors: { (error) in
+                completion(.failure(NetworkError.general("Error block")))
+                
+            }, failure: { (errorString) in
+                completion(.failure(NetworkError.general(errorString)))
+            })
+        }
+    }
+
+    func searchRepresentations(by longitude: String, and latitude: String, completion: @escaping GeneralCompletion<NewsModel>) {
+        let ss = "api/v4/Public/GetFindWarehouses?culture={culture}&Longitude={Longitude}&Latitude={Latitude}&count={count}&includeRegionalCenters={includeRegionalCenters}&CityId={CityId}"
+    }
+    
 }
