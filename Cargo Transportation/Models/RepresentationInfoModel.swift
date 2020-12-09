@@ -7,20 +7,20 @@
 
 import Foundation
 
-struct RepresentationInfoModel: Codable {
-    let status: Bool
-    let message: String
-    let data: [RepresentationInfoDataModel]
+struct RepresentationInfoModel: BaseModelProtocol {
+    var status: Bool
+    var message: String
+    var data: [RepresentationInfoDataModel]
 }
 
 struct RepresentationInfoDataModel: Codable {
-    let id, name, address, operatingTime: String
-    let phone, emailStorage: String
-    let latitude, longitude, latitudeCorrect, longitudeCorrect: Double
-    let cityID, cityName: String
-    let rcPhoneSecurity, rcPhoneManagers: String
-    let rcName, warehouseForDeliveryID: String
-    let warehouseType: Int
+    var id, name, address, operatingTime: String
+    var phone, emailStorage: String
+    var latitude, longitude, latitudeCorrect, longitudeCorrect: Double
+    var cityID, cityName: String
+    var rcPhoneSecurity, rcPhoneManagers: String
+    var rcName, warehouseForDeliveryID: String
+    var warehouseType: Int
 
     enum CodingKeys: String, CodingKey {
         case id, name, address, operatingTime

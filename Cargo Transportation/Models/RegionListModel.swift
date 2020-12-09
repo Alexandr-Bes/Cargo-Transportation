@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct RegionListModel: Codable {
-    let status: Bool
-    let message: String
-    let data: [RegionListDataModel]
+struct RegionListModel: BaseModelProtocol {
+    var status: Bool
+    var message: String
+    var data: [RegionListDataModel]
 }
 
 struct RegionListDataModel: Codable {
-    let id: Int
-    let name: String
-    let externalId: String
+    var id: Int
+    var name: String
+    var externalId: String
 }

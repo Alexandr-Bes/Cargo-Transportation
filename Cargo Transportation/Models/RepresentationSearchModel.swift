@@ -6,21 +6,21 @@
 //
 
 import Foundation
-
-struct RepresentationSearchModel: Codable {
-    let status: Bool
-    let message: String
-    let data: [RepresentationSearchDataModel]
+// Poka hz zachem
+struct RepresentationSearchModel: BaseModelProtocol {
+    var status: Bool
+    var message: String
+    var data: [RepresentationSearchDataModel]
 }
 
 struct RepresentationSearchDataModel: Codable {
-    let id, name: String
-    let distance, longitude, latitude, longitudeCorrect: Double
-    let latitudeCorrect: Double
-    let cityName: String
-    let address: String
-    let isWarehouse: Bool
-    let phone, workingTime: String
+    var id, name: String
+    var distance, longitude, latitude, longitudeCorrect: Double
+    var latitudeCorrect: Double
+    var cityName: String
+    var address: String
+    var isWarehouse: Bool
+    var phone, workingTime: String
 
     enum CodingKeys: String, CodingKey {
         case id, name, distance, longitude, latitude, longitudeCorrect, latitudeCorrect, cityName, address

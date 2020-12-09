@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct CitiesListModel: Codable {
-    let status: Bool
-    let message: String
-    let data: [CitiesListDataModel]
+struct CitiesListModel: BaseModelProtocol {
+    var status: Bool
+    var message: String
+    var data: [CitiesListDataModel]
 }
 
 struct CitiesListDataModel: Codable {
-    let id: String
-    let name: String
-    let regionID: String
-    let regionName: String
-    let districtName: String?
+    var id: String
+    var name: String
+    var regionID: String
+    var regionName: String
+    var districtName: String?
 
     enum CodingKeys: String, CodingKey {
         case id, name

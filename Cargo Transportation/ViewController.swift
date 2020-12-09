@@ -12,16 +12,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let networkManager = NetworkManager()
+        let appRepo = AppDelegateProvider().provide().sharedBuilder?.buildMainRepository()
         
-        networkManager.get { (result) in
+        appRepo?.getRegionList(completion: { (result) in
             switch result {
             case .success(let data):
                 print(data)
             case .failure(let error):
                 print(error.debugDescription)
             }
-        }
+        })
+        
+//        networkManager.getRegionList { (result) in
+//            switch result {
+//            case .success(let data):
+//                print(data)
+//            case .failure(let error):
+//                print(error.debugDescription)
+//            }
+//        }
         
 //        networkManager.authorize(email: "alex.morgan.mailfree@gmail.com", password: "strongp") { (result) in
 //            switch result {

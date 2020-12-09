@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		311FA48E9D0C8B1CFAEE33E1 /* Pods_Cargo_Transportation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802330C6EBFE848BA3ACE62E /* Pods_Cargo_Transportation.framework */; };
 		91C724099062D885724DC6D3 /* Pods_Cargo_TransportationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C64C20517854D0BC1E7737C /* Pods_Cargo_TransportationTests.framework */; };
+		A41EDF01257D211200ED9E69 /* DateArrivalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF00257D211200ED9E69 /* DateArrivalModel.swift */; };
+		A41EDF06257D24C700ED9E69 /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF05257D24C700ED9E69 /* BaseModelProtocol.swift */; };
+		A41EDF14257ECC2A00ED9E69 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF13257ECC2A00ED9E69 /* CalculatorModel.swift */; };
+		A41EDF532580295600ED9E69 /* SharedBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF522580295600ED9E69 /* SharedBuilder.swift */; };
+		A41EDF5B25802F2B00ED9E69 /* PathProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF5A25802F2B00ED9E69 /* PathProvider.swift */; };
+		A41EDF602580359700ED9E69 /* MainAppRepository+Representations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF5F2580359700ED9E69 /* MainAppRepository+Representations.swift */; };
+		A41EDF672580437B00ED9E69 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF662580437B00ED9E69 /* HomeTableViewCell.swift */; };
 		A44090612572CE3700EDBDBC /* AppDelegateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44090602572CE3700EDBDBC /* AppDelegateProvider.swift */; };
 		A44090712572CE9300EDBDBC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44090702572CE9200EDBDBC /* Helper.swift */; };
 		A440907B2572CEEE00EDBDBC /* AlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440907A2572CEEE00EDBDBC /* AlertController+extension.swift */; };
@@ -83,6 +90,13 @@
 		439BC9A1B677B598EF6D29AD /* Pods-Cargo TransportationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo TransportationTests.debug.xcconfig"; path = "Target Support Files/Pods-Cargo TransportationTests/Pods-Cargo TransportationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C64C20517854D0BC1E7737C /* Pods_Cargo_TransportationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cargo_TransportationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		802330C6EBFE848BA3ACE62E /* Pods_Cargo_Transportation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cargo_Transportation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41EDF00257D211200ED9E69 /* DateArrivalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateArrivalModel.swift; sourceTree = "<group>"; };
+		A41EDF05257D24C700ED9E69 /* BaseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
+		A41EDF13257ECC2A00ED9E69 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		A41EDF522580295600ED9E69 /* SharedBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedBuilder.swift; sourceTree = "<group>"; };
+		A41EDF5A25802F2B00ED9E69 /* PathProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathProvider.swift; sourceTree = "<group>"; };
+		A41EDF5F2580359700ED9E69 /* MainAppRepository+Representations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainAppRepository+Representations.swift"; sourceTree = "<group>"; };
+		A41EDF662580437B00ED9E69 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		A44090602572CE3700EDBDBC /* AppDelegateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateProvider.swift; sourceTree = "<group>"; };
 		A44090702572CE9200EDBDBC /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		A440907A2572CEEE00EDBDBC /* AlertController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+extension.swift"; sourceTree = "<group>"; };
@@ -183,6 +197,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A41EDF512580293900ED9E69 /* AppRepository */ = {
+			isa = PBXGroup;
+			children = (
+				A4E0E50B2576F2F4005234D4 /* MainAppRepository.swift */,
+				A4E0E5152576F3D4005234D4 /* MainAppRepository+Location.swift */,
+				A41EDF5F2580359700ED9E69 /* MainAppRepository+Representations.swift */,
+				A4E0E5102576F310005234D4 /* MainAppRepositoryProtocols.swift */,
+			);
+			path = AppRepository;
+			sourceTree = "<group>";
+		};
+		A41EDF642580434F00ED9E69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A44091682575AB2000EDBDBC /* NewsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A41EDF652580436200ED9E69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A41EDF662580437B00ED9E69 /* HomeTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A44090542572CDA300EDBDBC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,25 +243,17 @@
 		A44090582572CDC800EDBDBC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A41EDF512580293900ED9E69 /* AppRepository */,
 				A44091872576E8A600EDBDBC /* Location */,
 				A44090E82572D7EA00EDBDBC /* Networking */,
 				A440909D2572D1E300EDBDBC /* Local Storage */,
 				A44090A62572D37600EDBDBC /* Endpoints.swift */,
+				A41EDF5A25802F2B00ED9E69 /* PathProvider.swift */,
 				A44091052572E0D000EDBDBC /* Constants.swift */,
 				A44091752575B9BB00EDBDBC /* AppDateFormatter.swift */,
-				A4E0E50B2576F2F4005234D4 /* MainAppRepository.swift */,
-				A4E0E5152576F3D4005234D4 /* MainAppRepository+Location.swift */,
-				A4E0E5102576F310005234D4 /* MainAppRepositoryProtocols.swift */,
+				A41EDF522580295600ED9E69 /* SharedBuilder.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		A44090592572CDD800EDBDBC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A44091682575AB2000EDBDBC /* NewsTableViewCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		A440905A2572CDF300EDBDBC /* App */ = {
@@ -245,6 +278,7 @@
 		A44090D72572D47D00EDBDBC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A41EDF05257D24C700ED9E69 /* BaseModelProtocol.swift */,
 				A44090D82572D48B00EDBDBC /* LoginModel.swift */,
 				A44090FB2572DC1000EDBDBC /* UserLocation.swift */,
 				A440910D2572E4CB00EDBDBC /* SuccessLogin.swift */,
@@ -255,6 +289,8 @@
 				A440912B25731F9700EDBDBC /* RepresentationSearchModel.swift */,
 				A4E0E51A2576FC2E005234D4 /* SearchByCoordinatesModel.swift */,
 				A44091702575B1AC00EDBDBC /* NewsModel.swift */,
+				A41EDF00257D211200ED9E69 /* DateArrivalModel.swift */,
+				A41EDF13257ECC2A00ED9E69 /* CalculatorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,6 +320,7 @@
 		A440914B2575A56500EDBDBC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A41EDF652580436200ED9E69 /* Views */,
 				A44091542575A5CA00EDBDBC /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -292,6 +329,7 @@
 		A440914C2575A57300EDBDBC /* News */ = {
 			isa = PBXGroup;
 			children = (
+				A41EDF642580434F00ED9E69 /* Views */,
 				A440914F2575A5BC00EDBDBC /* NewsViewController.swift */,
 			);
 			path = News;
@@ -351,7 +389,6 @@
 				A440914A2575A55C00EDBDBC /* ViewControllers */,
 				A44090D72572D47D00EDBDBC /* Models */,
 				A440905A2572CDF300EDBDBC /* App */,
-				A44090592572CDD800EDBDBC /* Views */,
 				A44090582572CDC800EDBDBC /* Utils */,
 				A44090542572CDA300EDBDBC /* Extensions */,
 				A484EC90256C1CE600393E60 /* ViewController.swift */,
@@ -643,15 +680,19 @@
 				A44090A72572D37600EDBDBC /* Endpoints.swift in Sources */,
 				A44090D92572D48B00EDBDBC /* LoginModel.swift in Sources */,
 				A44091062572E0D000EDBDBC /* Constants.swift in Sources */,
+				A41EDF01257D211200ED9E69 /* DateArrivalModel.swift in Sources */,
 				A44091642575A7D600EDBDBC /* BaseNavigationController.swift in Sources */,
+				A41EDF14257ECC2A00ED9E69 /* CalculatorModel.swift in Sources */,
 				A440915A2575A5D700EDBDBC /* DeliveryViewController.swift in Sources */,
 				A44091182572E87300EDBDBC /* RegionListModel.swift in Sources */,
+				A41EDF672580437B00ED9E69 /* HomeTableViewCell.swift in Sources */,
 				A44090EA2572DB9900EDBDBC /* NetworkAdapter.swift in Sources */,
 				A440911D257312E900EDBDBC /* CitiesListModel.swift in Sources */,
 				A440912225731ABA00EDBDBC /* RepresentationListModel.swift in Sources */,
 				A44091012572DF0500EDBDBC /* NSObject+ext.swift in Sources */,
 				A484EC8D256C1CE600393E60 /* AppDelegate.swift in Sources */,
 				A440912C25731F9700EDBDBC /* RepresentationSearchModel.swift in Sources */,
+				A41EDF602580359700ED9E69 /* MainAppRepository+Representations.swift in Sources */,
 				A484EC8F256C1CE600393E60 /* SceneDelegate.swift in Sources */,
 				A44091762575B9BB00EDBDBC /* AppDateFormatter.swift in Sources */,
 				A44091712575B1AC00EDBDBC /* NewsModel.swift in Sources */,
@@ -664,6 +705,7 @@
 				A440910E2572E4CB00EDBDBC /* SuccessLogin.swift in Sources */,
 				A440909F2572D1FE00EDBDBC /* UserDefaultsLocalStorageAdapter.swift in Sources */,
 				A44090612572CE3700EDBDBC /* AppDelegateProvider.swift in Sources */,
+				A41EDF06257D24C700ED9E69 /* BaseModelProtocol.swift in Sources */,
 				A44091692575AB2000EDBDBC /* NewsTableViewCell.swift in Sources */,
 				A44091132572E56000EDBDBC /* Codable.swift in Sources */,
 				A44090F72572DBEA00EDBDBC /* LocationServiceAdapter.swift in Sources */,
@@ -673,7 +715,9 @@
 				A44090F22572DBB900EDBDBC /* AlamofireNetworkAdapter.swift in Sources */,
 				A4E0E50C2576F2F4005234D4 /* MainAppRepository.swift in Sources */,
 				A4E0E5162576F3D4005234D4 /* MainAppRepository+Location.swift in Sources */,
+				A41EDF5B25802F2B00ED9E69 /* PathProvider.swift in Sources */,
 				A44090712572CE9300EDBDBC /* Helper.swift in Sources */,
+				A41EDF532580295600ED9E69 /* SharedBuilder.swift in Sources */,
 				A44090992572D1CA00EDBDBC /* LocalStorageAdapter.swift in Sources */,
 				A44091502575A5BC00EDBDBC /* NewsViewController.swift in Sources */,
 				A440917B2575BF3F00EDBDBC /* LocationManager.swift in Sources */,

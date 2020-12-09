@@ -35,7 +35,7 @@ struct AppDateFormatter {
         return dateString
     }
     
-    func minutesLeft(toDate date: Date)->Int?{
+    func minutesLeft(toDate date: Date) -> Int? {
         let localDate = Date()
         //print(dateFormatter.string(from: localDate))
         let localDateString = dateFormatter.string(from: localDate)
@@ -44,7 +44,7 @@ struct AppDateFormatter {
         return diff
     }
     
-    func getLocalFormattedTime(time: String?)->String{
+    func getLocalFormattedTime(time: String?) -> String {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = fullDateFormat

@@ -11,6 +11,7 @@ class NetworkManager {
     
     private let networkAdapter = AlamofireNetworkAdapter()
     
+    // TODO: -
     func authorize(email: String, password: String, completion: @escaping GeneralCompletion<SuccessLogin>) {
         
         guard let url = URL(string: "https://www.delivery-auto.com/api/v4/Public/PostLogin") else {
@@ -53,11 +54,7 @@ class NetworkManager {
         return mapObject
     }
     
-    func get(completion: @escaping GeneralCompletion<RegionListModel>) {
-        guard let url = URL(string: "https://www.delivery-auto.com/api/v4/Public/GetRegionList?culture=ru-RU&country=1") else {
-            completion(.failure(NetworkError.general(Constants.NoURLErrorMessage)))
-            return
-        }
+    func getRegionList(url: URL, completion: @escaping GeneralCompletion<RegionListModel>) {
         
         networkAdapter.request(url: url, httpMethod: .get, encoding: .JSON, requestParameters: nil, requestHeaders: nil) { (response: NetworkResponse) in
             
@@ -78,6 +75,7 @@ class NetworkManager {
         }
     }
     
+    // TODO: -
     func downloadNews(completion: @escaping GeneralCompletion<NewsModel>) {
         guard let url = URL(string: "https://www.delivery-auto.com/api/v4/Public/GetNews?culture=ru-RU&count=20&page=1") else {
             completion(.failure(NetworkError.general(Constants.NoURLErrorMessage)))
@@ -103,10 +101,42 @@ class NetworkManager {
         }
     }
 
-    func searchRepresentations(with longitude: Double, and latitude: Double, completion: @escaping GeneralCompletion<SearchByCoordinatesModel>) {
-//        let ds =  "api/v4/Public/GetFindWarehouses?culture={culture}&Longitude={Longitude}&Latitude={Latitude}&count={count}&includeRegionalCenters={includeRegionalCenters}&CityId={CityId}"
+    func searchRepresentations(url: URL, completion: @escaping GeneralCompletion<SearchByCoordinatesModel>) {
         
-        guard let url = URL(string: "https://www.delivery-auto.com/api/v4/Public/GetFindWarehouses?culture=ru-RU&Longitude=\(longitude)&Latitude=\(latitude)&count=10") else {
+        networkAdapter.request(url: url, httpMethod: .get, encoding: .JSON, requestParameters: nil, requestHeaders: nil) { (response: NetworkResponse) in
+            
+            response.analysis(success: { (data) in
+                guard let responseObject = try? SearchByCoordinatesModel.decode(data: data) else {
+                    let errorString = Constants.AuthNetwork.parsingAuthSessionErrorMessage
+                    completion(.failure(NetworkError.general(errorString)))
+                    return
+                }
+                completion(.success(responseObject))
+        
+            }, errors: { (error) in
+                completion(.failure(NetworkError.general("Error block")))
+                
+            }, failure: { (errorString) in
+                completion(.failure(NetworkError.general(errorString)))
+            })
+        }
+    }
+    
+    // TODO: -
+    // TODO: - change params
+    func getDateArrival(areaID: String, arrivalID: String, completion: @escaping GeneralCompletion<DateArrivalModel>) {
+        let id = "4fc948a7-3729-e311-8b0d-00155d037960"
+        let arrival = "e3ac6f68-3529-e311-8b0d-00155d037960"
+        let first = "1c828aa6-70c8-e211-9902-00155d037919"
+        let second = "d908c5e1-b36b-e211-81e9-00155d012a15"
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy" //"yyyy-MM-dd'T'HH:mm:SS'Z'"
+        let dateString = formatter.string(from: date)
+        let currencyCode = 980
+        
+        guard let url = URL(string: "https://www.delivery-auto.com/api/v4/Public/GetDateArrival?areasSendId=\(id)&areasResiveId=\(arrival)&dateSend=\(dateString)&currency=\(currencyCode)&warehouseSendId=\(first)&warehouseResiveId=\(second)") else {
             completion(.failure(NetworkError.general(Constants.NoURLErrorMessage)))
             return
         }
@@ -114,7 +144,7 @@ class NetworkManager {
         networkAdapter.request(url: url, httpMethod: .get, encoding: .JSON, requestParameters: nil, requestHeaders: nil) { (response: NetworkResponse) in
             
             response.analysis(success: { (data) in
-                guard let responseObject = try? SearchByCoordinatesModel.decode(data: data) else {
+                guard let responseObject = try? DateArrivalModel.decode(data: data) else {
                     let errorString = Constants.AuthNetwork.parsingAuthSessionErrorMessage
                     completion(.failure(NetworkError.general(errorString)))
                     return

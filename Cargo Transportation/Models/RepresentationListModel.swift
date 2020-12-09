@@ -7,21 +7,21 @@
 
 import Foundation
 
-struct RepresentationListModel: Codable {
-    let status: Bool
-    let message: String
-    let data: [RepresentationListDataModel]
+struct RepresentationListModel: BaseModelProtocol {
+    var status: Bool
+    var message: String
+    var data: [RepresentationListDataModel]
 }
 
 struct RepresentationListDataModel: Codable {
-    let id: String
-    let name: String
-    let address: String
-    let latitude: Double
-    let longitude: Double
-    let cityID: String
-    let latitudeCorrect, longitudeCorrect: Double
-    let isCashOnDelivery: Bool
+    var id: String
+    var name: String
+    var address: String
+    var latitude: Double
+    var longitude: Double
+    var cityID: String
+    var latitudeCorrect, longitudeCorrect: Double // Fignya
+    var isCashOnDelivery: Bool
 
     enum CodingKeys: String, CodingKey {
         case id, name, address

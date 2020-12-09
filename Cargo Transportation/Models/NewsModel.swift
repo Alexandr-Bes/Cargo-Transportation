@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct NewsModel: Codable {
-    let status: Bool
-    let message: String
-    let data: [NewsModelData]
+struct NewsModel: BaseModelProtocol {
+    var status: Bool
+    var message: String
+    var data: [NewsModelData]
 }
 
 struct NewsModelData: Codable {
-    let id: Int
-    let title: String
-    let publishDate: String // TODO: - Fix with appropriate date
-    let content: String
+    var id: Int
+    var title: String
+    var publishDate: String // TODO: - Fix with appropriate date
+    var content: String
     
     enum CodingKeys: String, CodingKey {
         case id = "NewsItemId"

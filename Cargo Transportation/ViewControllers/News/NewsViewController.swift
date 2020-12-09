@@ -54,7 +54,7 @@ class NewsViewController: UIViewController {
                 self?.data = data
                 self?.tableView.reloadData()
             case .failure(let error):
-                print(error.debugDescription)
+                self?.showAlert(error: error)
             }
             self?.hideProgress()
         }

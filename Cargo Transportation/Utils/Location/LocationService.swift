@@ -10,13 +10,13 @@ import CoreLocation
 
 class LocationService : NSObject, LocationServiceAdapter {
     
-    private typealias AuthorizationComplition = (_ status: AuthorizationStatus) -> Void
+    private typealias AuthorizationCompletion = (_ status: AuthorizationStatus) -> Void
     
     private var locationManager = CLLocationManager()
     private let distanceFilter: Double = 100
     private var completionHandler: LocationHandler?
     
-    private var authorizationHandler: AuthorizationComplition?
+    private var authorizationHandler: AuthorizationCompletion?
     
     override init() {
         super.init()
@@ -77,7 +77,7 @@ class LocationService : NSObject, LocationServiceAdapter {
         }
     }
     
-    private func requestWhenInUseAuthorization(complition: AuthorizationComplition?) {
+    private func requestWhenInUseAuthorization(complition: AuthorizationCompletion?) {
         self.authorizationHandler = complition
         if currentAuthorizationStatus == .authorizedAlways ||
             currentAuthorizationStatus == .authorizedWhenInUse

@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct SearchByCoordinatesModel: Codable {
-    let status: Bool
-    let message: String
-    let data: [SearchByCoordinatesDataModel]
+struct SearchByCoordinatesModel: BaseModelProtocol {
+    var status: Bool
+    var message: String
+    var data: [SearchByCoordinatesDataModel]
 }
 
 struct SearchByCoordinatesDataModel: Codable {
-    let id, name: String
-    let distance, longitude, latitude: Double
-    let cityName, address: String
-    let phone, workingTime: String
+    var id, name: String
+    var distance, longitude, latitude: Double
+    var cityName, address: String
+    var phone, workingTime: String
     
     enum CodingKeys: String, CodingKey {
         case id, name, distance, longitude, latitude, cityName, address, phone

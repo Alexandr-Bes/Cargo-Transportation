@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SuccessLogin: Codable {
+struct SuccessLogin: BaseModelProtocol {
     var status: Bool
     var message: String
 }
