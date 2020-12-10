@@ -14,6 +14,9 @@ enum Endpoints: String {
     case regionList = "GetRegionList"
     case findRepresentationUserLocation = "GetFindWarehouses"
     case dateArrival = "GetDateArrival"
+    case representationDetails = "GetWarehousesInfo"
+    case citiesList = "GetAreasList"
+    case representationList = "GetWarehousesList"
     
     private var basePath : String {
         return "https://www.delivery-auto.com/api/v4/Public/"

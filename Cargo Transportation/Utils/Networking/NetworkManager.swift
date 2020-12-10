@@ -75,6 +75,71 @@ class NetworkManager {
         }
     }
     
+    func getCitiesList(url: URL, completion: @escaping GeneralCompletion<CitiesListModel>) {
+        networkAdapter.request(url: url, httpMethod: .get, encoding: .JSON, requestParameters: nil, requestHeaders: nil) { (response: NetworkResponse) in
+            
+            response.analysis(success: { (data) in
+                guard let responseObject = try? CitiesListModel.decode(data: data) else {
+                    let errorString = Constants.AuthNetwork.parsingAuthSessionErrorMessage
+                    completion(.failure(NetworkError.general(errorString)))
+                    return
+                }
+                completion(.success(responseObject))
+        
+            }, errors: { (error) in
+                completion(.failure(NetworkError.general("Error block")))
+                
+            }, failure: { (errorString) in
+                completion(.failure(NetworkError.general(errorString)))
+            })
+        }
+    }
+    
+    func getRepresentationList(url: URL, completion: @escaping GeneralCompletion<RepresentationListModel>) {
+        networkAdapter.request(url: url, httpMethod: .get, encoding: .JSON, requestParameters: nil, requestHeaders: nil) { (response: NetworkResponse) in
+            
+            response.analysis(success: { (data) in
+                guard let responseObject = try? RepresentationListModel.decode(data: data) else {
+                    let errorString = Constants.AuthNetwork.parsingAuthSessionErrorMessage
+                    completion(.failure(NetworkError.general(errorString)))
+                    return
+                }
+                completion(.success(responseObject))
+        
+            }, errors: { (error) in
+                completion(.failure(NetworkError.general("Error block")))
+                
+            }, failure: { (errorString) in
+                completion(.failure(NetworkError.general(errorString)))
+            })
+        }
+    }
+    
+    
+    func test<T: Codable>(url: URL, completion: @escaping GeneralCompletion<T>) {
+//        guard let responseObject = try? T.decode(data: data) 
+    }
+    
+    func getRepresentationInfo(url: URL, completion: @escaping GeneralCompletion<RepresentationInfoModel>) {
+        networkAdapter.request(url: url, httpMethod: .get, encoding: .JSON, requestParameters: nil, requestHeaders: nil) { (response: NetworkResponse) in
+            
+            response.analysis(success: { (data) in
+                guard let responseObject = try? RepresentationInfoModel.decode(data: data) else {
+                    let errorString = Constants.AuthNetwork.parsingAuthSessionErrorMessage
+                    completion(.failure(NetworkError.general(errorString)))
+                    return
+                }
+                completion(.success(responseObject))
+        
+            }, errors: { (error) in
+                completion(.failure(NetworkError.general("Error block")))
+                
+            }, failure: { (errorString) in
+                completion(.failure(NetworkError.general(errorString)))
+            })
+        }
+    }
+    
     // TODO: -
     func downloadNews(completion: @escaping GeneralCompletion<NewsModel>) {
         guard let url = URL(string: "https://www.delivery-auto.com/api/v4/Public/GetNews?culture=ru-RU&count=20&page=1") else {
@@ -159,6 +224,8 @@ class NetworkManager {
             })
         }
     }
+    
+
     
     
 }

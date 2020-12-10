@@ -73,16 +73,6 @@ final class HomeTableViewCell: UITableViewCell {
         nameLabel.text = data.name
         addressLabel.text = data.address
         workingTimeLabel.text = data.workingTime
-//        publishDateLabel.text = getLocalTime(for: datas.publishDate)
     }
-    
-//    private func getLocalTime(for dateString: String) -> String {
-//        let appDateFormatter = AppDateFormatter()
-//        let date = appDateFormatter.date(from: dateString)
-//        let dateFormat = "HH:mm - dd MMM yyyy"
-//        let newDateFormater = DateFormatter()
-//        newDateFormater.dateFormat = dateFormat
-//        let newTime = newDateFormater.string(from: date ?? Date())
-//        return newTime
-//    }
+
 }

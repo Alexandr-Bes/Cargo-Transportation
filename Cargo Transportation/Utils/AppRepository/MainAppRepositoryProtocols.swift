@@ -18,7 +18,11 @@ protocol LocationModuleProtocol: class {
 
 protocol RepresentationProtocol {
     func getRegionList(completion: @escaping GeneralCompletion<RegionListModel>)
+    func getCitiesList(id: Int, completion: @escaping GeneralCompletion<CitiesListModel>)
+    func getRepresentationList(cityID: String, regionID: String, completion: @escaping GeneralCompletion<RepresentationListModel>)
+    
     func searchRepresentationsWithUserLocation(longitude: Double, latitude: Double, completion: @escaping GeneralCompletion<SearchByCoordinatesModel>)
+    func getRepresentationInfo(id: String, completion: @escaping GeneralCompletion<RepresentationInfoModel>)
     func getDateArrival(areaID: String, arrivalID: String, completion: @escaping GeneralCompletion<DateArrivalModel>)
     
     

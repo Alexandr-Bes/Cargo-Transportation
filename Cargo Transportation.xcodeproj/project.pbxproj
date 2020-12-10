@@ -16,6 +16,10 @@
 		A41EDF5B25802F2B00ED9E69 /* PathProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF5A25802F2B00ED9E69 /* PathProvider.swift */; };
 		A41EDF602580359700ED9E69 /* MainAppRepository+Representations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF5F2580359700ED9E69 /* MainAppRepository+Representations.swift */; };
 		A41EDF672580437B00ED9E69 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF662580437B00ED9E69 /* HomeTableViewCell.swift */; };
+		A41EDF89258157F500ED9E69 /* RepresentationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF88258157F500ED9E69 /* RepresentationDetailsViewController.swift */; };
+		A41EDF8E25816E7000ED9E69 /* SearchRegionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF8D25816E7000ED9E69 /* SearchRegionsViewController.swift */; };
+		A41EDF932581736C00ED9E69 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF922581736C00ED9E69 /* CitiesViewController.swift */; };
+		A41EDF9B2581776000ED9E69 /* RepresentationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EDF9A2581776000ED9E69 /* RepresentationListViewController.swift */; };
 		A44090612572CE3700EDBDBC /* AppDelegateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44090602572CE3700EDBDBC /* AppDelegateProvider.swift */; };
 		A44090712572CE9300EDBDBC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44090702572CE9200EDBDBC /* Helper.swift */; };
 		A440907B2572CEEE00EDBDBC /* AlertController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440907A2572CEEE00EDBDBC /* AlertController+extension.swift */; };
@@ -97,6 +101,10 @@
 		A41EDF5A25802F2B00ED9E69 /* PathProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathProvider.swift; sourceTree = "<group>"; };
 		A41EDF5F2580359700ED9E69 /* MainAppRepository+Representations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainAppRepository+Representations.swift"; sourceTree = "<group>"; };
 		A41EDF662580437B00ED9E69 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		A41EDF88258157F500ED9E69 /* RepresentationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationDetailsViewController.swift; sourceTree = "<group>"; };
+		A41EDF8D25816E7000ED9E69 /* SearchRegionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRegionsViewController.swift; sourceTree = "<group>"; };
+		A41EDF922581736C00ED9E69 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		A41EDF9A2581776000ED9E69 /* RepresentationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentationListViewController.swift; sourceTree = "<group>"; };
 		A44090602572CE3700EDBDBC /* AppDelegateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateProvider.swift; sourceTree = "<group>"; };
 		A44090702572CE9200EDBDBC /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		A440907A2572CEEE00EDBDBC /* AlertController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+extension.swift"; sourceTree = "<group>"; };
@@ -322,6 +330,10 @@
 			children = (
 				A41EDF652580436200ED9E69 /* Views */,
 				A44091542575A5CA00EDBDBC /* HomeViewController.swift */,
+				A41EDF88258157F500ED9E69 /* RepresentationDetailsViewController.swift */,
+				A41EDF8D25816E7000ED9E69 /* SearchRegionsViewController.swift */,
+				A41EDF922581736C00ED9E69 /* CitiesViewController.swift */,
+				A41EDF9A2581776000ED9E69 /* RepresentationListViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -684,12 +696,14 @@
 				A44091642575A7D600EDBDBC /* BaseNavigationController.swift in Sources */,
 				A41EDF14257ECC2A00ED9E69 /* CalculatorModel.swift in Sources */,
 				A440915A2575A5D700EDBDBC /* DeliveryViewController.swift in Sources */,
+				A41EDF9B2581776000ED9E69 /* RepresentationListViewController.swift in Sources */,
 				A44091182572E87300EDBDBC /* RegionListModel.swift in Sources */,
 				A41EDF672580437B00ED9E69 /* HomeTableViewCell.swift in Sources */,
 				A44090EA2572DB9900EDBDBC /* NetworkAdapter.swift in Sources */,
 				A440911D257312E900EDBDBC /* CitiesListModel.swift in Sources */,
 				A440912225731ABA00EDBDBC /* RepresentationListModel.swift in Sources */,
 				A44091012572DF0500EDBDBC /* NSObject+ext.swift in Sources */,
+				A41EDF932581736C00ED9E69 /* CitiesViewController.swift in Sources */,
 				A484EC8D256C1CE600393E60 /* AppDelegate.swift in Sources */,
 				A440912C25731F9700EDBDBC /* RepresentationSearchModel.swift in Sources */,
 				A41EDF602580359700ED9E69 /* MainAppRepository+Representations.swift in Sources */,
@@ -698,12 +712,14 @@
 				A44091712575B1AC00EDBDBC /* NewsModel.swift in Sources */,
 				A44090942572D17400EDBDBC /* NibInstantiatable.swift in Sources */,
 				A440908A2572CFAC00EDBDBC /* String+extension.swift in Sources */,
+				A41EDF89258157F500ED9E69 /* RepresentationDetailsViewController.swift in Sources */,
 				A440915F2575A5E300EDBDBC /* FeedbackViewController.swift in Sources */,
 				A4E0E5112576F310005234D4 /* MainAppRepositoryProtocols.swift in Sources */,
 				A44090E12572D7E200EDBDBC /* NetworkManager.swift in Sources */,
 				A44090FC2572DC1000EDBDBC /* UserLocation.swift in Sources */,
 				A440910E2572E4CB00EDBDBC /* SuccessLogin.swift in Sources */,
 				A440909F2572D1FE00EDBDBC /* UserDefaultsLocalStorageAdapter.swift in Sources */,
+				A41EDF8E25816E7000ED9E69 /* SearchRegionsViewController.swift in Sources */,
 				A44090612572CE3700EDBDBC /* AppDelegateProvider.swift in Sources */,
 				A41EDF06257D24C700ED9E69 /* BaseModelProtocol.swift in Sources */,
 				A44091692575AB2000EDBDBC /* NewsTableViewCell.swift in Sources */,

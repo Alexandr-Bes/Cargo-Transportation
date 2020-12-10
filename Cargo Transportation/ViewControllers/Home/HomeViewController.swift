@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         
-        uploadData()
+        downloadData()
 //        dateArrival()
     }
     
@@ -57,7 +57,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private func uploadData() {
+    private func downloadData() {
         appRepository?.getUserLocation(completion: { [weak self] (result) in
             switch result {
             case .success(let userLoc):
@@ -131,8 +131,10 @@ extension HomeViewController: UITableViewDelegate {
         createRepresentationDetailVC(with: data.id)
     }
     
-    // TODO: -
     private func createRepresentationDetailVC(with id: String) {
         print(id)
+        let representationDetailsVC = RepresentationDetailsViewController()
+        representationDetailsVC.representationID = id
+        navigationController?.pushViewController(representationDetailsVC, animated: true)
     }
 }

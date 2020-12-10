@@ -17,6 +17,9 @@ protocol PathProviderProtocol {
     var getRegionList: String { get }
     var searchRepresentationsUserLocation: String { get }
     var getDateArrival: String { get }
+    var getRepresentationDetails: String { get }
+    var getCitiesList: String { get }
+    var getRepresentationList: String { get }
 }
 
 extension PathProviderProtocol {
@@ -40,5 +43,15 @@ extension PathProviderProtocol {
         return Endpoints.dateArrival.toString()
     }
     
+    var getRepresentationDetails: String {
+        return Endpoints.representationDetails.toStringWithSuffix()
+    }
+    
+    var getCitiesList: String {
+        return Endpoints.citiesList.toStringWithSuffix()
+    }
+    var getRepresentationList: String {
+        return Endpoints.representationList.toStringWithSuffix()
+    }
     
 }
