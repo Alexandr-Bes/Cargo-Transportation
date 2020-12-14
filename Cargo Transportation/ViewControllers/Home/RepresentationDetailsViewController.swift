@@ -11,6 +11,8 @@ import MapKit
 class RepresentationDetailsViewController: UIViewController {
     
     var representationID: String?
+    var isFromSearch: Bool?
+    var appModel: AppModel?
     
     private var appRepository: MainAppRepositoryProtocol?
     
@@ -25,7 +27,7 @@ class RepresentationDetailsViewController: UIViewController {
     private lazy var addressLabel: UILabel = {
        let label = UILabel()
 //        label.font = .systemFont(ofSize: 11)
-//        label.numberOfLines = 2
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -43,10 +45,14 @@ class RepresentationDetailsViewController: UIViewController {
         return label
     }()
     
-    private lazy var okButton: UIButton = {
+    private lazy var agreeButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Подтвердить", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
+        button.backgroundColor = .gray
+        button.setTitle(" Подтвердить ", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.textColor = .white
+        button.addTarget(self, action: #selector(agreeAction), for: .touchUpInside)
+        button.layer.cornerRadius = 9
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -74,7 +80,7 @@ class RepresentationDetailsViewController: UIViewController {
         view.addSubview(operatingTimeLabel)
         view.addSubview(addressLabel)
         view.addSubview(phoneLabel)
-        view.addSubview(okButton)
+        view.addSubview(agreeButton)
         view.addSubview(mapView)
         setupConstraints()
     }
@@ -86,17 +92,19 @@ class RepresentationDetailsViewController: UIViewController {
         }
         addressLabel.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().inset(16)
+            make.trailing.equalToSuperview().offset(-16)
             make.top.equalTo(nameLabel.snp.bottom).inset(-20)
         }
         operatingTimeLabel.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().inset(16)
+            make.trailing.equalToSuperview().offset(-16)
             make.top.equalTo(addressLabel.snp.bottom).inset(-10)
         }
         phoneLabel.snp.makeConstraints { (make) in
             make.leading.equalToSuperview().inset(16)
             make.top.equalTo(operatingTimeLabel.snp.bottom).inset(-10)
         }
-        okButton.snp.makeConstraints { (make) in
+        agreeButton.snp.makeConstraints { (make) in
             make.height.equalTo(30)
             make.centerX.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin).inset(10)
@@ -106,7 +114,7 @@ class RepresentationDetailsViewController: UIViewController {
             make.top.equalTo(phoneLabel.snp.bottom).inset(-30)
             make.leading.equalToSuperview().inset(16)
             make.trailing.equalToSuperview().offset(-16)
-            make.bottom.equalTo(okButton.snp.top).inset(-30)
+            make.bottom.equalTo(agreeButton.snp.top).inset(-30)
         }
     }
     
@@ -141,6 +149,26 @@ class RepresentationDetailsViewController: UIViewController {
         myAnnotation.title = data.data.rcName
         mapView.addAnnotation(myAnnotation)
 
+    }
+    
+    @objc private func agreeAction(sender: UIButton) {
+        if isFromSearch ?? false {
+            openCargoDetailsVC()
+        } else {
+            let searchRegionsVC = SearchRegionsViewController()
+            navigationController?.pushViewController(searchRegionsVC, animated: true)
+        }
+    }
+    
+    private func openCargoDetailsVC() {
+//        let viewController = UIStoryboard(name: "CargoDetails", bundle: nil).instantiateViewController(withIdentifier: "CargoDetailsTableViewController")
+        
+        let storyboard = UIStoryboard(storyboard: .cargoDetails, bundle: Bundle.main)
+        guard let view = storyboard.instantiateViewController(withIdentifier: "CargoDetailsTableViewController") as? CargoDetailsTableViewController
+        else {
+            fatalError("WRONG PARENT VIEW CONTROLLER!!!")
+        }
+        navigationController?.pushViewController(view, animated: true)
     }
 
 }

@@ -21,7 +21,7 @@ struct RepresentationListDataModel: Codable {
     var longitude: Double
     var cityID: String
     var latitudeCorrect, longitudeCorrect: Double // Fignya
-    var isCashOnDelivery: Bool
+    var isCashOnDelivery: Bool?
 
     enum CodingKeys: String, CodingKey {
         case id, name, address

@@ -54,4 +54,15 @@ extension PathProviderProtocol {
         return Endpoints.representationList.toStringWithSuffix()
     }
     
+    var getDeliveryScheme: String {
+        return Endpoints.deliveryScheme.toStringWithSuffix()
+    }
+    
+    var getAdditionalServices: String {
+        return Endpoints.services.toStringWithSuffix()
+    }
+    
+    var calculateDelivery: String {
+        return Endpoints.calculateDelivery.toString()
+    }
 }

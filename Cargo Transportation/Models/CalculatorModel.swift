@@ -8,6 +8,38 @@
 import Foundation
 
 struct CalculatorModel: Codable {
+    var culture: String
+    var areasSendId: String
+    var areasResiveId: String
+    var warehouseSendId: String
+    var warehouseResiveId: String
+    var InsuranceValue: Double
+    var CashOnDeliveryValue: Double
+    var dateSend: String
+    var deliveryScheme: Int
+    var category: [CategoryModel]
+    var dopUslugaClassificator: [DopUslugaClassificationModel]
+}
+
+struct CategoryModel: Codable {
+    var categoryId: String          //Id категории груза
+    var countPlace: Int             //Количество мест
+    var helf: Double                //Вес
+    var size: Double                //Объем
+}
+
+struct DopUslugaClassificationModel: Codable {
+    var dopUsluga: [DopUslugaModel]
+}
+
+struct DopUslugaModel: Codable {
+    var uslugaId: String
+    var count: Int
+}
+
+// MARK: - FOR TESTS
+
+struct CalculatorModelTest: Codable {
     var culture: String         //Культура
     var areasSendId: String       //Id города отправления
     var areasResiveId: String      //Id города получения
@@ -27,8 +59,8 @@ struct CalculatorModel: Codable {
     var climbingToFloor: Int            //Доставка на этаж
     var descentFromFloor: Int           //Спуск с этажа
     var deliveryScheme: Int             //Схема доставки ???
-    var category: [CategoryModel]         //Перечисления категорий груза
-    var dopUslugaClassificator: [DopUslugaClassificationModel]  //Перечисление доп. услуг
+    var category: [CategoryModelTest]         //Перечисления категорий груза
+    var dopUslugaClassificator: [DopUslugaClassificationModelTest]  //Перечисление доп. услуг
     var categorySumma: Double?              //decimal
     var allSumma: Double?               //decimal //Общая стоимость перевозки
     var status: Bool                //Статус расчета
@@ -46,7 +78,7 @@ struct CalculatorModel: Codable {
     var viewType: Int       //
 }
 
-struct CategoryModel: Codable {
+struct CategoryModelTest: Codable {
     var categoryId: String          //Id категории груза
     var categoryIdName: String      //Наименование категории груза
     var classification: Int
@@ -66,13 +98,13 @@ struct CategoryModel: Codable {
     
 }
 
-struct DopUslugaClassificationModel: Codable {
+struct DopUslugaClassificationModelTest: Codable {
     var classification: Int     //Код категории
     var name: String            //Наименование категории
-    var dopUsluga: [DopUslugaModel]
+    var dopUsluga: [DopUslugaModelTest]
 }
 
-struct DopUslugaModel:Codable {
+struct DopUslugaModelTest:Codable {
     var uslugaId: String        //Id доп. услуги
     var name: String            //Наименование доп. услуги
     var cost: Double            //decimal? cost; //Стоимость доп. услуги

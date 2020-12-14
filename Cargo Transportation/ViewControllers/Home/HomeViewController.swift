@@ -79,7 +79,6 @@ class HomeViewController: UIViewController {
                                                              completion: { [weak self] (result) in
             switch result {
             case .success(let response):
-                print(response.data.first)
                 self?.responseData = response.data
                 self?.tableView.reloadData()
             case .failure(let error):
@@ -135,6 +134,9 @@ extension HomeViewController: UITableViewDelegate {
         print(id)
         let representationDetailsVC = RepresentationDetailsViewController()
         representationDetailsVC.representationID = id
+        representationDetailsVC.isFromSearch = false
+        var appModel = AppModel()
+        appModel.areasSendId = id
         navigationController?.pushViewController(representationDetailsVC, animated: true)
     }
 }

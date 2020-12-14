@@ -24,14 +24,7 @@ extension UIStoryboard {
     /// Available storyboards
     ///
     enum Storyboard: String {
-        case register
-        case welcome
-        case splash
-        case login
-        case cards
-        case meeting
-        case settings
-        case reset
+        case cargoDetails
         
         var filename: String {
             return rawValue.capitalizeFirst()

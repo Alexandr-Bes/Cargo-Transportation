@@ -90,7 +90,7 @@ class NewsTableViewCell: UITableViewCell {
     private func getLocalTime(for dateString: String) -> String {
         let appDateFormatter = AppDateFormatter()
         let date = appDateFormatter.date(from: dateString)
-        let dateFormat = "HH:mm - dd MMM yyyy"
+        let dateFormat = "dd MMM yyyy"
         let newDateFormater = DateFormatter()
         newDateFormater.dateFormat = dateFormat
         let newTime = newDateFormater.string(from: date ?? Date())

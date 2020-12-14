@@ -92,6 +92,57 @@ extension MainAppRepository {
         }
     }
     
+    
+    func getDeliveryScheme(citySendID: String, cityReceiveID: String, warehouseReceiveID: String, completion: @escaping GeneralCompletion<DeliverySchemeModel>) {
+        let urlString = pathProvider.getDeliveryScheme + "&CitySendId=\(citySendID)" + "&CityReceiveId=\(cityReceiveID)" + "&WarehouseReceiveId=\(warehouseReceiveID)"
+        guard let url = URL(string: urlString) else {
+            completion(.failure(NetworkError.general(Constants.NoURLErrorMessage)))
+            return
+        }
+        
+        networkManager.getDeliveryScheme(url: url) { (result) in
+            switch result {
+            case .success(let responseObject):
+                completion(.success(responseObject))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    func getAdditionalServices(citySendID: String, cityReceiveID: String, completion: @escaping GeneralCompletion<AdditionalServicesModel>) {
+        let urlString = pathProvider.getAdditionalServices + "&CitySendId=\(citySendID)" + "&CityReceiveId=\(cityReceiveID)" + "&currency=100000000"
+        guard let url = URL(string: urlString) else {
+            completion(.failure(NetworkError.general(Constants.NoURLErrorMessage)))
+            return
+        }
+        networkManager.getAdditionalServices(url: url) { (result) in
+            switch result {
+            case .success(let responseObject):
+                completion(.success(responseObject))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    
+    func calculateDelivery(model: CalculatorModel, completion: @escaping GeneralCompletion<CalculationReceiveModel>) {
+        let urlString = pathProvider.calculateDelivery
+        guard let url = URL(string: urlString) else {
+            completion(.failure(NetworkError.general(Constants.NoURLErrorMessage)))
+            return
+        }
+        networkManager.calculateDelivery(url: url, model: model) { (result) in
+            switch result {
+            case .success(let responseObject):
+                completion(.success(responseObject))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
     func getDateArrival(areaID: String, arrivalID: String, completion: @escaping GeneralCompletion<DateArrivalModel>) {
         
     }

@@ -11,15 +11,7 @@ class Constants {
     
     static let NoURLErrorMessage = "No URL"
     static let NoActiveSessionErrorMessage = "No Active Session"
-    static let ParseBetModelError = "Can't create a Bet"
-    
-    struct HeaderProvider {
-        static let xAuthToken = "Authorization"
-        static let xTraceId = "x-trace-id"
-        static let xSessionId = "x-session-id"
-        static let xUserId = "x-user-id"
-        static let contentType = "Content-Type"
-    }
+    static let ParseCalculateModelError = "Can't create a calculate request params"
     
     
     struct HTTP {
@@ -41,28 +33,8 @@ class Constants {
         static let parsingAuthSessionErrorMessage = "AuthNetwork parsing session error"
     }
     
-    struct PlaceBetNetwork {
-        static let decodeErrorMessage = "Can't decode the bet"
-        static let betsDecodeErrorMessage = "Can't decode placed bets"
-    }
-    
-    struct PoolNetwork {
-        
-        static let parsingPoolsErrorMessage = "PoolNetwork parsing error"
-    }
-    
     struct Geocoding {
         static let geocodingError = "Geocoding error"
-    }
-    
-    struct NetworkParameters {
-        static let email = "email"
-        static let password = "password"
-        static let resetToken = "resetToken"
-        static let username = "username"
-        
-        static let settled = "settled"
-        
     }
     
     struct NotificationKeys {
@@ -72,26 +44,22 @@ class Constants {
         static let openLogin = Notification.Name("OpenLogin")
     }
     
-    // TODO: - RENAME!!!
     enum TabBarItems: CaseIterable {
-        case cards
-        case myBets
-        case deposit
-        case history
-        case settings
+        case home
+        case news
+        case delivery
+        case feedback
         
         var index: Int {
             switch self {
-            case .cards:
+            case .home:
                 return 0
-            case .myBets:
+            case .news:
                 return 1
-            case .deposit:
+            case .delivery:
                 return 2
-            case .history:
+            case .feedback:
                 return 3
-            case .settings:
-                return 4
             }
         }
     }

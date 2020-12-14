@@ -25,6 +25,10 @@ protocol RepresentationProtocol {
     func getRepresentationInfo(id: String, completion: @escaping GeneralCompletion<RepresentationInfoModel>)
     func getDateArrival(areaID: String, arrivalID: String, completion: @escaping GeneralCompletion<DateArrivalModel>)
     
+    func getDeliveryScheme(citySendID: String, cityReceiveID: String, warehouseReceiveID: String, completion: @escaping GeneralCompletion<DeliverySchemeModel>)
+    func getAdditionalServices(citySendID: String, cityReceiveID: String, completion: @escaping GeneralCompletion<AdditionalServicesModel>)
+    
+    func calculateDelivery(model: CalculatorModel, completion: @escaping GeneralCompletion<CalculationReceiveModel>)
     
     func authorize(email: String, password: String, completion: @escaping GeneralCompletion<SuccessLogin>)
     func downloadNews(completion: @escaping GeneralCompletion<NewsModel>)
