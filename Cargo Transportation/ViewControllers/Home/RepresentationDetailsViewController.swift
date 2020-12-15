@@ -12,8 +12,8 @@ class RepresentationDetailsViewController: UIViewController {
     
     var representationID: String?
     var isFromSearch: Bool?
-    var appModel: AppModel?
     
+    private var responseData: RepresentationInfoDataModel?
     private var appRepository: MainAppRepositoryProtocol?
     
     private lazy var nameLabel: UILabel = {
@@ -45,10 +45,11 @@ class RepresentationDetailsViewController: UIViewController {
         return label
     }()
     
-    private lazy var agreeButton: UIButton = {
+    private lazy var continueButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .gray
-        button.setTitle(" Подтвердить ", for: .normal)
+        button.alpha = 0.5
+        button.setTitle("Дальше", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.textColor = .white
         button.addTarget(self, action: #selector(agreeAction), for: .touchUpInside)
@@ -65,7 +66,6 @@ class RepresentationDetailsViewController: UIViewController {
     override func loadView() {
         super.loadView()
         appRepository = AppDelegateProvider().provide().sharedBuilder?.buildMainRepository()
-        
     }
     
     override func viewDidLoad() {
@@ -80,7 +80,7 @@ class RepresentationDetailsViewController: UIViewController {
         view.addSubview(operatingTimeLabel)
         view.addSubview(addressLabel)
         view.addSubview(phoneLabel)
-        view.addSubview(agreeButton)
+        view.addSubview(continueButton)
         view.addSubview(mapView)
         setupConstraints()
     }
@@ -104,9 +104,9 @@ class RepresentationDetailsViewController: UIViewController {
             make.leading.equalToSuperview().inset(16)
             make.top.equalTo(operatingTimeLabel.snp.bottom).inset(-10)
         }
-        agreeButton.snp.makeConstraints { (make) in
+        continueButton.snp.makeConstraints { (make) in
+            make.leading.trailing.equalToSuperview().inset(24)
             make.height.equalTo(30)
-            make.centerX.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin).inset(10)
         }
         
@@ -114,7 +114,7 @@ class RepresentationDetailsViewController: UIViewController {
             make.top.equalTo(phoneLabel.snp.bottom).inset(-30)
             make.leading.equalToSuperview().inset(16)
             make.trailing.equalToSuperview().offset(-16)
-            make.bottom.equalTo(agreeButton.snp.top).inset(-30)
+            make.bottom.equalTo(continueButton.snp.top).inset(-30)
         }
     }
     
@@ -125,6 +125,7 @@ class RepresentationDetailsViewController: UIViewController {
             self?.hideProgress()
             switch result {
             case .success(let responseData):
+                self?.responseData = responseData.data
                 self?.fillData(data: responseData)
             case .failure(let error):
                 self?.showAlert(error: error)
@@ -145,7 +146,7 @@ class RepresentationDetailsViewController: UIViewController {
         mapView.setRegion(region, animated: true)
         
         let myAnnotation: MKPointAnnotation = MKPointAnnotation()
-        myAnnotation.coordinate = center//CLLocationCoordinate2DMake(data.data.longitude, data.data.latitude);
+        myAnnotation.coordinate = center
         myAnnotation.title = data.data.rcName
         mapView.addAnnotation(myAnnotation)
 
@@ -155,20 +156,35 @@ class RepresentationDetailsViewController: UIViewController {
         if isFromSearch ?? false {
             openCargoDetailsVC()
         } else {
-            let searchRegionsVC = SearchRegionsViewController()
-            navigationController?.pushViewController(searchRegionsVC, animated: true)
+            openSearchRegionsVC()
         }
     }
     
+    private func openSearchRegionsVC() {
+//        var appModel = AppModel()
+//        appModel.areasSendId = responseData?.cityID
+//        appModel.warehouseSendId = responseData?.id
+        AppDelegateProvider().provide().appModel.areasSendId = responseData?.cityID
+        AppDelegateProvider().provide().appModel.warehouseSendId = responseData?.id
+        
+        let searchRegionsVC = SearchRegionsViewController()
+//        searchRegionsVC.appModel = appModel
+        navigationController?.pushViewController(searchRegionsVC, animated: true)
+    }
+    
     private func openCargoDetailsVC() {
-//        let viewController = UIStoryboard(name: "CargoDetails", bundle: nil).instantiateViewController(withIdentifier: "CargoDetailsTableViewController")
+        AppDelegateProvider().provide().appModel.areasReceiveId = responseData?.cityID
+        AppDelegateProvider().provide().appModel.warehouseReceiveId = responseData?.id
+//        appModel?.areasReceiveId = responseData?.cityID
+//        appModel?.warehouseReceiveId = responseData?.id
         
         let storyboard = UIStoryboard(storyboard: .cargoDetails, bundle: Bundle.main)
-        guard let view = storyboard.instantiateViewController(withIdentifier: "CargoDetailsTableViewController") as? CargoDetailsTableViewController
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "CargoDetailsTableViewController") as? CargoDetailsTableViewController
         else {
             fatalError("WRONG PARENT VIEW CONTROLLER!!!")
         }
-        navigationController?.pushViewController(view, animated: true)
+//        viewController.appModel = self.appModel
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
 }

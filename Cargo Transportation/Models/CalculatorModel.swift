@@ -38,7 +38,7 @@ struct DopUslugaModel: Codable {
 }
 
 // MARK: - FOR TESTS
-
+/*
 struct CalculatorModelTest: Codable {
     var culture: String         //Культура
     var areasSendId: String       //Id города отправления
@@ -116,3 +116,4 @@ struct DopUslugaModelTest:Codable {
     var comment: String
     var currency: Int       //Валюта
 }
+*/

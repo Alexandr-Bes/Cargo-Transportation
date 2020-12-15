@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import CoreData
 
 class FinalCalculationViewController: UIViewController {
     
     var servicesIDs: [String]?
     private var appRepository: MainAppRepositoryProtocol?
     private var responseData: CalculationReceiveDataModel?
+    
+    private var userDelivery: [NSManagedObject] = []
     
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -52,6 +55,19 @@ class FinalCalculationViewController: UIViewController {
         return label
     }()
     
+    private lazy var confirmButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .gray
+        button.alpha = 0.5
+        button.setTitle("Подтверждаю", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.textColor = .white
+        button.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
+        button.layer.cornerRadius = 9
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override func loadView() {
         super.loadView()
         appRepository = AppDelegateProvider().provide().sharedBuilder?.buildMainRepository()
@@ -81,6 +97,7 @@ class FinalCalculationViewController: UIViewController {
         scrollView.addSubview(dateReceiveLabel)
         scrollView.addSubview(finalSumLabel)
         scrollView.addSubview(descriptionLabel)
+        view.addSubview(confirmButton)
         dispatchLabel.sizeToFit()
         dateReceiveLabel.sizeToFit()
         finalSumLabel.sizeToFit()
@@ -110,15 +127,27 @@ class FinalCalculationViewController: UIViewController {
 //            make.trailing.equalToSuperview().inset(16)
             make.top.equalTo(finalSumLabel.snp.bottom).inset(-10)
         }
+        
+        confirmButton.snp.makeConstraints { (make) in
+            make.leading.trailing.equalToSuperview().inset(24)
+            make.height.equalTo(30)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin).inset(10)
+        }
     }
     
     private func configLabels(with data: CalculationReceiveDataModel) {
         dispatchLabel.text = "\(data.warehouseSendIdName) -> \(data.warehouseResiveIdName)"
         dateReceiveLabel.text = "Дата получения посылки: \(dateFormat(from: data.dateResive))"
         finalSumLabel.text = "Стоимость: \(data.allSumma) грн"
-        descriptionLabel.text = data.comment
+        descriptionLabel.text = "Полная расшифровка: \n\(data.comment)"
     }
     
+    @objc private func confirmAction(sender: UIButton) {
+        saveUserDelivery()
+        //TODO: - MOCKED activity indicator
+        
+    }
+
     private func dateFormat(from dateString: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale.current
@@ -148,19 +177,74 @@ class FinalCalculationViewController: UIViewController {
     }
     
     private func createRequestModel() -> CalculatorModel? {
+        let appModel = AppDelegateProvider().provide().appModel
+        guard let weight = appModel.weight,
+              let size = appModel.size,
+              let areasSendId = appModel.areasSendId,
+              let areasReceiveId = appModel.areasReceiveId,
+              let warehouseSendId = appModel.warehouseSendId,
+              let warehouseReceiveId = appModel.warehouseReceiveId,
+              let insuranceValue = appModel.insuranceValue,
+              let cashOnDeliveryValue = appModel.cashOnDeliveryValue,
+              let deliveryScheme = appModel.deliveryScheme
+        else {
+            return nil
+        }
+        
         //TODO: - Check if empty?
-        guard let ids = servicesIDs else { return nil }
-        let category = CategoryModel(categoryId: "00000000-0000-0000-0000-000000000000", countPlace: 1, helf: 2, size: 2)
+        guard let IDs = servicesIDs else { return nil }
+        let category = CategoryModel(categoryId: "00000000-0000-0000-0000-000000000000", countPlace: 1, helf: weight, size: size)
         var dopUsluga = [DopUslugaModel]()
-        for element in ids {
+        for element in IDs {
             let model = DopUslugaModel(uslugaId: element, count: 1)
             dopUsluga.append(model)
         }
         let dopUslugi = DopUslugaClassificationModel(dopUsluga: dopUsluga)
-        let model = CalculatorModel(culture: "ru-RU", areasSendId: "16617df3-a42a-e311-8b0d-00155d037960", areasResiveId: "63e72aa4-3f2b-e311-8b0d-00155d037960", warehouseSendId: "71322701-ca82-e511-8f9d-000d3a200160", warehouseResiveId: "5aca54b4-f858-e411-afed-000d3a200936", InsuranceValue: 10000.2, CashOnDeliveryValue: 4000, dateSend: "15.12.2020", deliveryScheme: 2, category: [category], dopUslugaClassificator: [dopUslugi])
+        
+        let model = CalculatorModel(culture: "ru-RU", areasSendId: areasSendId, areasResiveId: areasReceiveId, warehouseSendId: warehouseSendId, warehouseResiveId: warehouseReceiveId, InsuranceValue: insuranceValue, CashOnDeliveryValue: cashOnDeliveryValue, dateSend: AppDateFormatter.getLocalFormattedDate(), deliveryScheme: deliveryScheme, category: [category], dopUslugaClassificator: [dopUslugi])
+    
         return model
     }
+}
+
+private extension FinalCalculationViewController {
     
+    func saveUserDelivery() {
+        let appModel = AppDelegateProvider().provide().appModel
+        guard let insuranceValue = appModel.insuranceValue,
+              let cashOnDeliveryValue = appModel.cashOnDeliveryValue,
+              let dateReceive = responseData?.dateResive,
+              let cost = responseData?.allSumma,
+              let warehouseReceive = responseData?.warehouseResiveIdName,
+              let warehouseSend = responseData?.warehouseSendIdName,
+              let cityReceive = responseData?.areasResiveIdName,
+              let citySend = responseData?.areasSendIdName
+        else {
+            return
+        }
+        
+        let appDelegate = AppDelegateProvider().provide()
+        let managedContext = appDelegate.persistentContainer.viewContext
+        guard let entity = NSEntityDescription.entity(forEntityName: "UserDelivery", in: managedContext) else { return }
+        
+        let userDelivery = NSManagedObject(entity: entity, insertInto: managedContext)
+        userDelivery.setValue(cashOnDeliveryValue, forKeyPath: "cashOnDeliveryValue")
+        userDelivery.setValue(cityReceive, forKey: "cityReceive")
+        userDelivery.setValue(citySend, forKey: "citySend")
+        userDelivery.setValue(cost, forKey: "cost")
+        userDelivery.setValue(dateReceive, forKey: "dateReceive")
+        userDelivery.setValue(Date(), forKey: "dateSend")
+        userDelivery.setValue(insuranceValue, forKey: "insuranceValue")
+        userDelivery.setValue("Отправлено", forKey: "status")
+        userDelivery.setValue(warehouseReceive, forKey: "warehouseReceive")
+        userDelivery.setValue(warehouseSend, forKey: "warehouseSend")
 
-
+      do {
+        try managedContext.save()
+        self.userDelivery.append(userDelivery)
+      } catch let error as NSError {
+        print("Could not save. \(error), \(error.userInfo)")
+      }
+    }
+    
 }

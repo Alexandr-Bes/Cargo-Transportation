@@ -12,6 +12,7 @@ class CitiesViewController: UIViewController {
     private var appRepository: MainAppRepositoryProtocol?
     private let cellIdentifier = "Cell"
     private var responseData: [CitiesListDataModel]?
+    
     var regionId: Int?
     
     private lazy var tableView: UITableView = {

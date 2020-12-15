@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5F2-TR-gc8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5F2-TR-gc8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -133,7 +133,7 @@
         <scene sceneID="kNx-F8-uUR">
             <objects>
                 <navigationController title="News" automaticallyAdjustsScrollViewInsets="NO" id="P17-yy-zly" customClass="BaseNavigationController" customModule="Cargo_Transportation" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" image="ic_news" id="JFS-5Z-c5e"/>
+                    <tabBarItem key="tabBarItem" title="Новости" image="ic_news" id="JFS-5Z-c5e"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="isl-h2-7sI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -152,7 +152,7 @@
         <scene sceneID="BZI-Kt-IUz">
             <objects>
                 <navigationController title="Home" automaticallyAdjustsScrollViewInsets="NO" id="xpw-fq-aJA" customClass="BaseNavigationController" customModule="Cargo_Transportation" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="ic_box" id="rwm-mC-0lH">
+                    <tabBarItem key="tabBarItem" title="Главная" image="ic_box" id="rwm-mC-0lH">
                         <color key="badgeColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -169,11 +169,11 @@
             </objects>
             <point key="canvasLocation" x="1279.7101449275362" y="-725.22321428571422"/>
         </scene>
-        <!--Delivery-->
+        <!--Отправки-->
         <scene sceneID="sO4-6K-QU1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jN1-uS-G2m" customClass="BaseNavigationController" customModule="Cargo_Transportation" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Delivery" image="ic_delivery" id="bVB-mD-JJe"/>
+                    <tabBarItem key="tabBarItem" title="Отправки" image="ic_delivery" id="bVB-mD-JJe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q49-le-Nmf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -188,11 +188,11 @@
             </objects>
             <point key="canvasLocation" x="1362" y="741"/>
         </scene>
-        <!--Feedback-->
+        <!--Пользователь-->
         <scene sceneID="DCB-a8-LUv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xuQ-9x-EgS" customClass="BaseNavigationController" customModule="Cargo_Transportation" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feedback" image="ic_feedback" id="U6C-tn-hGf"/>
+                    <tabBarItem key="tabBarItem" title="Пользователь" image="ic_feedback" id="U6C-tn-hGf"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="DXq-Fq-Gyz">

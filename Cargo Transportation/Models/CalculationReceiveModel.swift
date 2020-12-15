@@ -14,8 +14,8 @@ struct CalculationReceiveModel: BaseModelProtocol {
 }
 
 struct CalculationReceiveDataModel: Codable {
-//    let areasSendIdName: String
-//    let areasResiveIdName: String
+    let areasSendIdName: String
+    let areasResiveIdName: String
     let warehouseSendIdName: String
     let warehouseResiveIdName: String
     let dateResive: String

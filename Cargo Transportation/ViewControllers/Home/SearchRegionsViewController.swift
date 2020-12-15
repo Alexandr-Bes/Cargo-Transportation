@@ -65,7 +65,6 @@ class SearchRegionsViewController: UIViewController {
             self?.hideProgress()
         })
     }
-    
 
 }
 

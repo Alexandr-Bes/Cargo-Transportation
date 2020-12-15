@@ -95,7 +95,6 @@ extension RepresentationListViewController: UITableViewDelegate {
     }
     
     private func createRepresentationDetailVC(with id: String) {
-        print(id)
         let representationDetailsVC = RepresentationDetailsViewController()
         representationDetailsVC.representationID = id
         representationDetailsVC.isFromSearch = true

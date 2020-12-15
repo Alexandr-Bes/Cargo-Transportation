@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B50" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="UserDelivery" representedClassName="UserDelivery" syncable="YES" codeGenerationType="class">
+        <attribute name="cashOnDeliveryValue" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="cityReceive" optional="YES" attributeType="String"/>
+        <attribute name="citySend" optional="YES" attributeType="String"/>
+        <attribute name="cost" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="dateReceive" optional="YES" attributeType="String"/>
+        <attribute name="dateSend" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="insuranceValue" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="warehouseReceive" optional="YES" attributeType="String"/>
+        <attribute name="warehouseSend" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="UserDelivery" positionX="-63" positionY="-18" width="128" height="179"/>
+    </elements>
 </model>

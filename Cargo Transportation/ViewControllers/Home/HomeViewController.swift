@@ -39,13 +39,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
         downloadData()
-//        dateArrival()
     }
     
     private func setupUI() {
-        title = "Home"
+        title = "Главная"
         setupTableView()
     }
     
@@ -88,22 +86,6 @@ class HomeViewController: UIViewController {
         })
     }
     
-    private func dateArrival() {
-        let networkManager = NetworkManager()
-        self.showProgress()
-        
-        networkManager.getDateArrival(areaID: "", arrivalID: "") { [weak self] (result) in
-            switch result {
-            case .success(let data):
-                print(data.data)
-            case .failure(let error):
-                self?.showAlert(error: error)
-            }
-            self?.hideProgress()
-        }
-        
-    }
-    
 }
 
 
@@ -131,12 +113,9 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     private func createRepresentationDetailVC(with id: String) {
-        print(id)
         let representationDetailsVC = RepresentationDetailsViewController()
         representationDetailsVC.representationID = id
         representationDetailsVC.isFromSearch = false
-        var appModel = AppModel()
-        appModel.areasSendId = id
         navigationController?.pushViewController(representationDetailsVC, animated: true)
     }
 }

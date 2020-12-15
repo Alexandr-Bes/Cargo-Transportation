@@ -19,10 +19,11 @@ class CargoDetailsTableViewController: UITableViewController {
     private var receivedData:[DeliverySchemeDataModel]?
     private var appRepository: MainAppRepositoryProtocol?
     
-    private lazy var agreeButton: UIButton = {
+    private lazy var continueButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .gray
-        button.setTitle(" Подтвердить ", for: .normal)
+        button.setTitle("Дальше", for: .normal)
+        button.alpha = 0.5
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.textColor = .white
         button.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
@@ -46,10 +47,12 @@ class CargoDetailsTableViewController: UITableViewController {
         title = "Детали"
         navigationItem.backButtonTitle = "Назад"
         
-        view.addSubview(agreeButton)
-        agreeButton.snp.makeConstraints { (make) in
+        view.addSubview(continueButton)
+        continueButton.snp.makeConstraints { (make) in
+            let screenWidth = view.frame.width
             make.centerX.equalToSuperview()
             make.height.equalTo(30)
+            make.width.equalTo(screenWidth - 48)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin).inset(10)
         }
         
@@ -61,14 +64,18 @@ class CargoDetailsTableViewController: UITableViewController {
         sizeTextField.delegate = self
         
         tableView.keyboardDismissMode = .onDrag
-        
-//        let confirmButton = UIBarButtonItem(title: "Подтвердить", style: .plain, target: self, action: #selector(confirmAction))
-//        navigationItem.rightBarButtonItems = [confirmButton]
     }
 
     func downloadData() {
         self.showProgress()
-        appRepository?.getDeliveryScheme(citySendID: "16617df3-a42a-e311-8b0d-00155d037960", cityReceiveID: "aa3250a4-402b-e311-8b0d-00155d037960", warehouseReceiveID: "f33b6d45-b249-e211-ab75-00155d012d0d", completion: { [weak self] (result) in
+        let appModel = AppDelegateProvider().provide().appModel
+        guard let citySendId = appModel.areasSendId,
+              let cityReceiveId = appModel.areasReceiveId,
+              let warehouseReceiveID = appModel.warehouseReceiveId else {
+            return
+        }
+        
+        appRepository?.getDeliveryScheme(citySendID: citySendId, cityReceiveID: cityReceiveId, warehouseReceiveID: warehouseReceiveID, completion: { [weak self] (result) in
             switch result {
             case .success(let response):
                 self?.receivedData = response.data
@@ -86,15 +93,20 @@ class CargoDetailsTableViewController: UITableViewController {
             showAlertMessage()
         } else {
             let selected = receivedData?[deliverySchemePickerView.selectedRow(inComponent: 0)]
-            print(selected?.name)
+            print(selected?.name as Any)
             showAdditionalServicesVC()
         }
     }
     
     private func showAdditionalServicesVC() {
+        configAppModel()
         let viewController = AdditionalServicesViewController()
-        viewController.citySendID = "16617df3-a42a-e311-8b0d-00155d037960"
-        viewController.cityReceiveID = "aa3250a4-402b-e311-8b0d-00155d037960"
+        guard let citySendId = AppDelegateProvider().provide().appModel.areasSendId,
+              let cityReceiveId = AppDelegateProvider().provide().appModel.areasReceiveId else {
+            return
+        }
+        viewController.citySendID = citySendId
+        viewController.cityReceiveID = cityReceiveId
         navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -119,8 +131,33 @@ class CargoDetailsTableViewController: UITableViewController {
     
 }
 
-extension CargoDetailsTableViewController {
-    
+private extension CargoDetailsTableViewController {
+    func configAppModel() {
+        //Delivery Scheme
+        guard let schemeString = receivedData?[deliverySchemePickerView.selectedRow(inComponent: 0)].id,
+              let scheme = Int(schemeString) else { return }
+        AppDelegateProvider().provide().appModel.deliveryScheme = scheme
+        
+        // CashOnDelivery
+        guard let cashOnDeliveryString = cashOnDeliveryTextField.text,
+              let cashOnDelivery = Double(cashOnDeliveryString) else { return }
+        AppDelegateProvider().provide().appModel.cashOnDeliveryValue = cashOnDelivery
+        
+        // Insurance
+        guard let insuranceString = insuranceTextField.text,
+              let insurance = Double(insuranceString) else { return }
+        AppDelegateProvider().provide().appModel.insuranceValue = insurance
+        
+        // Weight
+        guard let weightString = weightTextField.text,
+              let weight = Double(weightString) else { return }
+        AppDelegateProvider().provide().appModel.weight = weight
+        
+        // Size
+        guard let sizeString = sizeTextField.text,
+              let size = Double(sizeString) else { return }
+        AppDelegateProvider().provide().appModel.size = size
+    }
 }
 
 extension CargoDetailsTableViewController: UITextFieldDelegate {

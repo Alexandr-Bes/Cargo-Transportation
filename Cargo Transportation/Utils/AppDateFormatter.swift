@@ -44,17 +44,12 @@ struct AppDateFormatter {
         return diff
     }
     
-    func getLocalFormattedTime(time: String?) -> String {
-        
+    static func getLocalFormattedDate() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = fullDateFormat
-        dateFormatter.timeZone = TimeZone(identifier: "GMT")
-        let date = dateFormatter.date(from: time ?? "Some date")
-        
-        let newFormat = "HH:mm"
+        dateFormatter.locale = Locale.current
+        dateFormatter.dateFormat = "dd.MM.yyyy"
         dateFormatter.timeZone = TimeZone.current
-        dateFormatter.dateFormat = newFormat
-        let newTime = dateFormatter.string(from: date ?? Date())
+        let newTime = dateFormatter.string(from: Date())
         return newTime
     }
     

@@ -8,10 +8,12 @@
 import Foundation
 
 struct AppModel {
-    var areasSendId: String?
-    var warehouseSendId: String?
+    var areasSendId: String?    // CityID
+    var warehouseSendId: String?    // Representation ID
+    
     var areasReceiveId: String?
-    var warehouseReseiveId: String?
+    var warehouseReceiveId: String?
+    
     var insuranceValue: Double?
     var cashOnDeliveryValue: Double?
     var dateSend: String?

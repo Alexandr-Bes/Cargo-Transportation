@@ -30,16 +30,15 @@ class AdditionalServicesViewController: UIViewController {
         return tableView
     }()
     
-    private lazy var agreeButton: UIButton = {
+    private lazy var continueButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .gray
-        button.setTitle(" Подтвердить ", for: .normal)
+        button.alpha = 0.5
+        button.setTitle("Дальше", for: .normal)
         button.setTitleColor(.white, for: .normal)
-//        button.titleLabel?.font = UIFont.
         button.titleLabel?.textColor = .white
         button.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)
         button.layer.cornerRadius = 9
-//        button.layer.masksToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -47,24 +46,21 @@ class AdditionalServicesViewController: UIViewController {
     override func loadView() {
         super.loadView()
         appRepository = AppDelegateProvider().provide().sharedBuilder?.buildMainRepository()
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         downloadData()
-        
-
     }
     
     private func setupUI() {
         title = "Дополнительные услуги"
         setupTableView()
-        view.addSubview(agreeButton)
+        view.addSubview(continueButton)
         
-        agreeButton.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
+        continueButton.snp.makeConstraints { (make) in
+            make.leading.trailing.equalToSuperview().inset(24)
             make.height.equalTo(30)
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin).inset(10)
         }

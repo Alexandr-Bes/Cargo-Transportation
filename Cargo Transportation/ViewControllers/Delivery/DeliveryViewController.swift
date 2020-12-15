@@ -6,28 +6,37 @@
 //
 
 import UIKit
+import CoreData
 
 class DeliveryViewController: UIViewController {
+    
+    var userDelivery: [NSManagedObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
     }
     
-    func setupUI() {
-        title = "Delivery"
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getUserDelivery()
+        print(userDelivery)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupUI() {
+        title = "Отправки"
     }
-    */
+    
+    private func getUserDelivery() {
+        let appDelegate = AppDelegateProvider().provide()
 
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UserDelivery")
+
+        do {
+          userDelivery = try managedContext.fetch(fetchRequest)
+        } catch let error as NSError {
+          print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
 }
