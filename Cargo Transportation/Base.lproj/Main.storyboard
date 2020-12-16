@@ -37,23 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVZ-HH-4mf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="1421"/>
-        </scene>
-        <!--Feedback View Controller-->
-        <scene sceneID="hNK-me-mga">
-            <objects>
-                <viewController id="jOd-u5-alC" customClass="FeedbackViewController" customModule="Cargo_Transportation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="af6-Px-Lqk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="ekW-3a-LxB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BJH-U3-NQI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DN7-xf-amG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-130" y="1421"/>
+            <point key="canvasLocation" x="2190" y="741"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="gCw-Yj-EAy">
@@ -122,7 +106,6 @@
                         <segue destination="xpw-fq-aJA" kind="relationship" relationship="viewControllers" id="Kcd-NM-ZCZ"/>
                         <segue destination="P17-yy-zly" kind="relationship" relationship="viewControllers" id="88k-Ww-dQZ"/>
                         <segue destination="jN1-uS-G2m" kind="relationship" relationship="viewControllers" id="Eoh-zW-Gdv"/>
-                        <segue destination="xuQ-9x-EgS" kind="relationship" relationship="viewControllers" id="UdU-so-jtW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESk-RC-DF5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -186,33 +169,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAZ-ok-udr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1362" y="741"/>
-        </scene>
-        <!--Пользователь-->
-        <scene sceneID="DCB-a8-LUv">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xuQ-9x-EgS" customClass="BaseNavigationController" customModule="Cargo_Transportation" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Пользователь" image="ic_feedback" id="U6C-tn-hGf"/>
-                    <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="DXq-Fq-Gyz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jOd-u5-alC" kind="relationship" relationship="rootViewController" id="kv1-1F-lof"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tyx-hd-KB7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-130.43478260869566" y="740.625"/>
+            <point key="canvasLocation" x="1280" y="741"/>
         </scene>
     </scenes>
     <resources>
         <image name="ic_box" width="50" height="50"/>
         <image name="ic_delivery" width="50" height="50"/>
-        <image name="ic_feedback" width="50" height="50"/>
         <image name="ic_news" width="50" height="50"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

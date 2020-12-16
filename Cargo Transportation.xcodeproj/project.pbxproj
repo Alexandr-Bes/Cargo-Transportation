@@ -49,7 +49,6 @@
 		A44091502575A5BC00EDBDBC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440914F2575A5BC00EDBDBC /* NewsViewController.swift */; };
 		A44091552575A5CA00EDBDBC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091542575A5CA00EDBDBC /* HomeViewController.swift */; };
 		A440915A2575A5D700EDBDBC /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091592575A5D700EDBDBC /* DeliveryViewController.swift */; };
-		A440915F2575A5E300EDBDBC /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440915E2575A5E300EDBDBC /* FeedbackViewController.swift */; };
 		A44091642575A7D600EDBDBC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091632575A7D600EDBDBC /* BaseNavigationController.swift */; };
 		A44091692575AB2000EDBDBC /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091682575AB2000EDBDBC /* NewsTableViewCell.swift */; };
 		A44091712575B1AC00EDBDBC /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091702575B1AC00EDBDBC /* NewsModel.swift */; };
@@ -70,6 +69,8 @@
 		A4E0E5162576F3D4005234D4 /* MainAppRepository+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0E5152576F3D4005234D4 /* MainAppRepository+Location.swift */; };
 		A4E0E51B2576FC2E005234D4 /* SearchByCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E0E51A2576FC2E005234D4 /* SearchByCoordinatesModel.swift */; };
 		A701AB9BBC798B81D7C7EDFA /* Pods_Cargo_Transportation_Cargo_TransportationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A79239BC9833291152344252 /* Pods_Cargo_Transportation_Cargo_TransportationUITests.framework */; };
+		FA4784E9258A823700502055 /* DeliveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4784E8258A823700502055 /* DeliveryCell.swift */; };
+		FA4784F9258A87B100502055 /* UserDeliveryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4784F8258A87B100502055 /* UserDeliveryModel.swift */; };
 		FAC314C525862A2E0061673E /* CargoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC314C425862A2E0061673E /* CargoDetailsViewController.swift */; };
 		FAC314CA25862B410061673E /* CargoDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC314C925862B410061673E /* CargoDetails.storyboard */; };
 		FAC314D2258639ED0061673E /* DeliverySchemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC314D1258639ED0061673E /* DeliverySchemeModel.swift */; };
@@ -143,7 +144,6 @@
 		A440914F2575A5BC00EDBDBC /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A44091542575A5CA00EDBDBC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A44091592575A5D700EDBDBC /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
-		A440915E2575A5E300EDBDBC /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		A44091632575A7D600EDBDBC /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		A44091682575AB2000EDBDBC /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		A44091702575B1AC00EDBDBC /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
@@ -174,6 +174,8 @@
 		BF3CC9A9E1DFC6008DEC4125 /* Pods-Cargo Transportation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo Transportation.debug.xcconfig"; path = "Target Support Files/Pods-Cargo Transportation/Pods-Cargo Transportation.debug.xcconfig"; sourceTree = "<group>"; };
 		C327D272C4ED8C1780E6DAC8 /* Pods-Cargo TransportationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo TransportationTests.release.xcconfig"; path = "Target Support Files/Pods-Cargo TransportationTests/Pods-Cargo TransportationTests.release.xcconfig"; sourceTree = "<group>"; };
 		DF86FCA79DCD8782F5B93492 /* Pods-Cargo Transportation-Cargo TransportationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cargo Transportation-Cargo TransportationUITests.debug.xcconfig"; path = "Target Support Files/Pods-Cargo Transportation-Cargo TransportationUITests/Pods-Cargo Transportation-Cargo TransportationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA4784E8258A823700502055 /* DeliveryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryCell.swift; sourceTree = "<group>"; };
+		FA4784F8258A87B100502055 /* UserDeliveryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeliveryModel.swift; sourceTree = "<group>"; };
 		FAC314C425862A2E0061673E /* CargoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CargoDetailsViewController.swift; sourceTree = "<group>"; };
 		FAC314C925862B410061673E /* CargoDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CargoDetails.storyboard; sourceTree = "<group>"; };
 		FAC314D1258639ED0061673E /* DeliverySchemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverySchemeModel.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				FAC314F2258775A80061673E /* CalculationReceiveModel.swift */,
 				FAC314D1258639ED0061673E /* DeliverySchemeModel.swift */,
 				FAC314DD25866A3E0061673E /* AdditionalServicesModel.swift */,
+				FA4784F8258A87B100502055 /* UserDeliveryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -339,7 +342,6 @@
 		A440914A2575A55C00EDBDBC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A440914E2575A58B00EDBDBC /* Feedback */,
 				A440914D2575A57900EDBDBC /* Delivery */,
 				A440914C2575A57300EDBDBC /* News */,
 				A440914B2575A56500EDBDBC /* Home */,
@@ -377,17 +379,10 @@
 		A440914D2575A57900EDBDBC /* Delivery */ = {
 			isa = PBXGroup;
 			children = (
+				FA4784E7258A820800502055 /* Views */,
 				A44091592575A5D700EDBDBC /* DeliveryViewController.swift */,
 			);
 			path = Delivery;
-			sourceTree = "<group>";
-		};
-		A440914E2575A58B00EDBDBC /* Feedback */ = {
-			isa = PBXGroup;
-			children = (
-				A440915E2575A5E300EDBDBC /* FeedbackViewController.swift */,
-			);
-			path = Feedback;
 			sourceTree = "<group>";
 		};
 		A44091872576E8A600EDBDBC /* Location */ = {
@@ -469,6 +464,14 @@
 				C327D272C4ED8C1780E6DAC8 /* Pods-Cargo TransportationTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA4784E7258A820800502055 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA4784E8258A823700502055 /* DeliveryCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -725,6 +728,7 @@
 				A41EDF01257D211200ED9E69 /* DateArrivalModel.swift in Sources */,
 				A44091642575A7D600EDBDBC /* BaseNavigationController.swift in Sources */,
 				A41EDF14257ECC2A00ED9E69 /* CalculatorModel.swift in Sources */,
+				FA4784F9258A87B100502055 /* UserDeliveryModel.swift in Sources */,
 				A440915A2575A5D700EDBDBC /* DeliveryViewController.swift in Sources */,
 				A41EDF9B2581776000ED9E69 /* RepresentationListViewController.swift in Sources */,
 				A44091182572E87300EDBDBC /* RegionListModel.swift in Sources */,
@@ -746,7 +750,6 @@
 				A44090942572D17400EDBDBC /* NibInstantiatable.swift in Sources */,
 				A440908A2572CFAC00EDBDBC /* String+extension.swift in Sources */,
 				A41EDF89258157F500ED9E69 /* RepresentationDetailsViewController.swift in Sources */,
-				A440915F2575A5E300EDBDBC /* FeedbackViewController.swift in Sources */,
 				A4E0E5112576F310005234D4 /* MainAppRepositoryProtocols.swift in Sources */,
 				A44090E12572D7E200EDBDBC /* NetworkManager.swift in Sources */,
 				A44090FC2572DC1000EDBDBC /* UserLocation.swift in Sources */,
@@ -759,6 +762,7 @@
 				A44091692575AB2000EDBDBC /* NewsTableViewCell.swift in Sources */,
 				A44091132572E56000EDBDBC /* Codable.swift in Sources */,
 				A44090F72572DBEA00EDBDBC /* LocationServiceAdapter.swift in Sources */,
+				FA4784E9258A823700502055 /* DeliveryCell.swift in Sources */,
 				FAC314F82587A90B0061673E /* AppModel.swift in Sources */,
 				A44090802572CF5000EDBDBC /* UIViewController+Ext.swift in Sources */,
 				A440908F2572D02000EDBDBC /* UITableViewCell+Reusable.swift in Sources */,
