@@ -53,7 +53,6 @@
 		A44091692575AB2000EDBDBC /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091682575AB2000EDBDBC /* NewsTableViewCell.swift */; };
 		A44091712575B1AC00EDBDBC /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091702575B1AC00EDBDBC /* NewsModel.swift */; };
 		A44091762575B9BB00EDBDBC /* AppDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44091752575B9BB00EDBDBC /* AppDateFormatter.swift */; };
-		A440917B2575BF3F00EDBDBC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440917A2575BF3F00EDBDBC /* LocationManager.swift */; };
 		A44091802575C20000EDBDBC /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A440917F2575C20000EDBDBC /* LocationService.swift */; };
 		A484EC8D256C1CE600393E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC8C256C1CE600393E60 /* AppDelegate.swift */; };
 		A484EC8F256C1CE600393E60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484EC8E256C1CE600393E60 /* SceneDelegate.swift */; };
@@ -148,7 +147,6 @@
 		A44091682575AB2000EDBDBC /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		A44091702575B1AC00EDBDBC /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		A44091752575B9BB00EDBDBC /* AppDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDateFormatter.swift; sourceTree = "<group>"; };
-		A440917A2575BF3F00EDBDBC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A440917F2575C20000EDBDBC /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		A484EC89256C1CE600393E60 /* Cargo Transportation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cargo Transportation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A484EC8C256C1CE600393E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -389,7 +387,6 @@
 			isa = PBXGroup;
 			children = (
 				A44090F62572DBEA00EDBDBC /* LocationServiceAdapter.swift */,
-				A440917A2575BF3F00EDBDBC /* LocationManager.swift */,
 				A440917F2575C20000EDBDBC /* LocationService.swift */,
 			);
 			path = Location;
@@ -776,7 +773,6 @@
 				A41EDF532580295600ED9E69 /* SharedBuilder.swift in Sources */,
 				A44090992572D1CA00EDBDBC /* LocalStorageAdapter.swift in Sources */,
 				A44091502575A5BC00EDBDBC /* NewsViewController.swift in Sources */,
-				A440917B2575BF3F00EDBDBC /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

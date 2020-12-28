@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" systemColor="opaqueSeparatorColor"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
                         <color key="selectedImageTintColor" systemColor="systemYellowColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
@@ -112,15 +112,16 @@
             </objects>
             <point key="canvasLocation" x="392" y="-24"/>
         </scene>
-        <!--News-->
+        <!--Новости-->
         <scene sceneID="kNx-F8-uUR">
             <objects>
-                <navigationController title="News" automaticallyAdjustsScrollViewInsets="NO" id="P17-yy-zly" customClass="BaseNavigationController" customModule="Cargo_Transportation" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController title="Новости" automaticallyAdjustsScrollViewInsets="NO" id="P17-yy-zly" customClass="BaseNavigationController" customModule="Cargo_Transportation" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Новости" image="ic_news" id="JFS-5Z-c5e"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="isl-h2-7sI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -142,6 +143,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FwU-WD-EKG">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -161,6 +163,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q49-le-Nmf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -176,11 +179,11 @@
         <image name="ic_box" width="50" height="50"/>
         <image name="ic_delivery" width="50" height="50"/>
         <image name="ic_news" width="50" height="50"/>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

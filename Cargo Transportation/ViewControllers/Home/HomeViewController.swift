@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.allowsSelection = true
-        tableView.backgroundColor = .lightGray
+        tableView.backgroundColor = .systemGray3
         tableView.register(cells: HomeViewController.cell)
 //        tableView.rowHeight = UITableView.automaticDimension
         tableView.rowHeight = 70
@@ -98,7 +98,7 @@ extension HomeViewController: UITableViewDataSource {
         let cell: HomeTableViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
         guard let data = responseData?[indexPath.row] else { return UITableViewCell() }
         cell.configure(with: data)
-        cell.backgroundColor = .lightGray
+        cell.backgroundColor = .systemGray3
         return cell
     }
 }

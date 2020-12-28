@@ -56,7 +56,9 @@ class SearchRegionsViewController: UIViewController {
         appRepository?.getRegionList(completion: { [weak self] (result) in
             switch result {
             case .success(let response):
-                self?.responseData = response.data
+                var tempData = response.data
+                tempData.removeFirst()
+                self?.responseData = tempData
                 self?.tableView.reloadData()
             case .failure(let error):
                 print(error.debugDescription)
@@ -77,7 +79,7 @@ extension SearchRegionsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath as IndexPath)
         guard let data = responseData?[indexPath.row] else { return UITableViewCell() }
         cell.textLabel?.text = data.name
-        cell.backgroundColor = .lightGray
+        cell.backgroundColor = .systemGray3
         return cell
     }
 }

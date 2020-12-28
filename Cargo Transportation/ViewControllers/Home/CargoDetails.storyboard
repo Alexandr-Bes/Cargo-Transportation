@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h1J-1f-SU7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h1J-1f-SU7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +14,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="20" sectionFooterHeight="18" id="yd8-S6-fp6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="sectionIndexBackgroundColor" systemColor="systemGray4Color"/>
                         <sections>
                             <tableViewSection headerTitle="Общая информация" id="mXc-0o-c8x">
                                 <cells>
@@ -45,6 +46,7 @@
                                                 <constraint firstItem="Gfa-el-W4C" firstAttribute="centerY" secondItem="Q15-5M-ngR" secondAttribute="centerY" id="l7q-Ia-Gei"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Ucw-S3-uqw">
                                         <rect key="frame" x="0.0" y="99" width="414" height="43.5"/>
@@ -75,6 +77,7 @@
                                                 <constraint firstItem="guB-VV-8qC" firstAttribute="leading" secondItem="fpc-kw-wJn" secondAttribute="leading" constant="16" id="uVG-20-xnY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Xoc-Aj-9rw">
                                         <rect key="frame" x="0.0" y="142.5" width="414" height="43.5"/>
@@ -105,6 +108,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="4O5-Wm-QsD" secondAttribute="trailing" constant="16" id="g8S-SB-qXO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -139,6 +143,7 @@
                                                 <constraint firstItem="cUx-Md-OtO" firstAttribute="leading" secondItem="Q4j-s9-w2S" secondAttribute="leading" constant="16" id="wzT-y1-x8c"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Dif-fy-rko">
                                         <rect key="frame" x="0.0" y="285.5" width="414" height="43.5"/>
@@ -169,6 +174,7 @@
                                                 <constraint firstItem="XL6-tF-Fpd" firstAttribute="centerY" secondItem="gSy-aX-AC2" secondAttribute="centerY" id="x5A-xC-s5X"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -192,8 +198,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

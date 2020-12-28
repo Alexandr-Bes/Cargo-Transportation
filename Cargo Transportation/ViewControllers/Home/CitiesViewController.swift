@@ -21,7 +21,7 @@ class CitiesViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.allowsSelection = true
-        tableView.backgroundColor = .lightGray
+        tableView.backgroundColor = .systemGray3
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.rowHeight = 40
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -82,7 +82,7 @@ extension CitiesViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath as IndexPath)
         guard let data = responseData?[indexPath.row] else { return UITableViewCell() }
         cell.textLabel?.text = data.name
-        cell.backgroundColor = .lightGray
+        cell.backgroundColor = .systemGray3
         return cell
     }
 }

@@ -47,8 +47,7 @@ class RepresentationDetailsViewController: UIViewController {
     
     private lazy var continueButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .gray
-        button.alpha = 0.5
+        button.backgroundColor = .systemGray3
         button.setTitle("Дальше", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.textColor = .white

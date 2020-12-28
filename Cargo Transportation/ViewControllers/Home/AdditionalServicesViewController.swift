@@ -22,7 +22,7 @@ class AdditionalServicesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = true
-        tableView.backgroundColor = .darkGray
+        tableView.backgroundColor = .systemGray3
         tableView.register(cells: cell)
         tableView.allowsMultipleSelection = true
         tableView.rowHeight = 50
@@ -32,8 +32,8 @@ class AdditionalServicesViewController: UIViewController {
     
     private lazy var continueButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .gray
-        button.alpha = 0.5
+        button.backgroundColor = .systemGray2
+//        button.alpha = 0.5
         button.setTitle("Дальше", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.textColor = .white
@@ -146,6 +146,7 @@ extension AdditionalServicesViewController: UITableViewDataSource {
         let cell: AdditionalServicesCell = tableView.dequeueReusableCell(indexPath: indexPath)
         guard let data = responseData?[indexPath.section].services[indexPath.row] else { return UITableViewCell() }
         cell.configure(with: data.name, and: Int(data.cost))
+        cell.backgroundColor = .systemGray3
         return cell
     }
     

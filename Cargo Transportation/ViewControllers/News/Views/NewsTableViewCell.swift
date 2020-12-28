@@ -73,18 +73,17 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     func configure(with data: NewsModelData?) {
-        guard let datas = data else {
+        guard let _data = data else {
             return
         }
+        guard let dataa = _data.content.data(using: .utf8) else { return}
         
-        let htmlText = Data(datas.content.utf8)
-        
-        if let attributedString = try? NSAttributedString(data: htmlText, options: [.documentType: NSAttributedString.DocumentType.plain], documentAttributes: nil) {
-            contentLabel.attributedText = attributedString
+        if let text = try? NSAttributedString(data: dataa, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil) {
+            contentLabel.attributedText = text
         }
         
-        titleLabel.text = datas.title
-        publishDateLabel.text = getLocalTime(for: datas.publishDate)
+        titleLabel.text = _data.title
+        publishDateLabel.text = getLocalTime(for: _data.publishDate)
     }
     
     private func getLocalTime(for dateString: String) -> String {

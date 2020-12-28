@@ -21,9 +21,8 @@ class CargoDetailsTableViewController: UITableViewController {
     
     private lazy var continueButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .gray
+        button.backgroundColor = .systemGray3
         button.setTitle("Дальше", for: .normal)
-        button.alpha = 0.5
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.textColor = .white
         button.addTarget(self, action: #selector(confirmAction), for: .touchUpInside)

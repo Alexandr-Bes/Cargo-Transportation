@@ -20,7 +20,9 @@ class DeliveryViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.backgroundColor = .systemGray
         tableView.register(cells: DeliveryViewController.cell)
-        tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = 185
+//        tableView.rowHeight = UITableView.automaticDimension
+//        tableView.estimatedRowHeight = 200
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
@@ -55,7 +57,7 @@ class DeliveryViewController: UIViewController {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UserDelivery")
 
         do {
-          userDelivery = try managedContext.fetch(fetchRequest)
+            userDelivery = try managedContext.fetch(fetchRequest).reversed()
         } catch let error as NSError {
           print("Could not fetch. \(error), \(error.userInfo)")
         }
@@ -72,7 +74,7 @@ extension DeliveryViewController: UITableViewDataSource {
         let dataBaseData = userDelivery[indexPath.row]
         guard let data = createUserDeliveryModel(data: dataBaseData) else { return UITableViewCell() }
         cell.configCell(with: data)
-        cell.backgroundColor = .systemGray
+        cell.backgroundColor = .systemGray3
         return cell
     }
     

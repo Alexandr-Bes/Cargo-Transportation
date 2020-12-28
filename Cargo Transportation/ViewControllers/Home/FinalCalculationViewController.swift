@@ -57,8 +57,8 @@ class FinalCalculationViewController: UIViewController {
     
     private lazy var confirmButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .gray
-        button.alpha = 0.5
+        button.backgroundColor = .systemGray3
+//        button.alpha = 0.5
         button.setTitle("Подтверждаю", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.textColor = .white
@@ -137,14 +137,18 @@ class FinalCalculationViewController: UIViewController {
     
     private func configLabels(with data: CalculationReceiveDataModel) {
         dispatchLabel.text = "\(data.warehouseSendIdName) -> \(data.warehouseResiveIdName)"
-        dateReceiveLabel.text = "Дата получения посылки: \(dateFormat(from: data.dateResive))"
-        finalSumLabel.text = "Стоимость: \(data.allSumma) грн"
-        descriptionLabel.text = "Полная расшифровка: \n\(data.comment)"
+        dateReceiveLabel.attributedText = makeAttributtedString(title: "Дата получения посылки: ", titleSize: 16, text: dateFormat(from: data.dateResive), regularSize: 15)
+        finalSumLabel.attributedText = makeAttributtedString(title: "Стоимость: ", titleSize: 16, text: "\(data.allSumma) грн", regularSize: 15)
+        descriptionLabel.attributedText = makeAttributtedString(title: "Полная расшифровка:\n", titleSize: 16, text: data.comment, regularSize: 14)
     }
     
     @objc private func confirmAction(sender: UIButton) {
         saveUserDelivery()
-        //TODO: - MOCKED activity indicator
+        showProgress()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
+            self?.hideProgress()
+            self?.navigationController?.popToRootViewController(animated: true)
+        }
         
     }
 
@@ -204,6 +208,14 @@ class FinalCalculationViewController: UIViewController {
         let model = CalculatorModel(culture: "ru-RU", areasSendId: areasSendId, areasResiveId: areasReceiveId, warehouseSendId: warehouseSendId, warehouseResiveId: warehouseReceiveId, InsuranceValue: insuranceValue, CashOnDeliveryValue: cashOnDeliveryValue, dateSend: AppDateFormatter.getLocalFormattedDate(), deliveryScheme: deliveryScheme, category: [category], dopUslugaClassificator: [dopUslugi])
     
         return model
+    }
+    
+    private func makeAttributtedString(title: String, titleSize: CGFloat, text: String, regularSize: CGFloat) -> NSAttributedString {
+        let titleAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: titleSize)]
+        let result = NSMutableAttributedString(string: title, attributes: titleAttribute)
+        let textAttribute = NSAttributedString(string: text, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: regularSize)])
+        result.append(textAttribute)
+        return result
     }
 }
 

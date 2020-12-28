@@ -17,8 +17,8 @@ class NewsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        tableView.allowsSelection = true
-        tableView.backgroundColor = .lightGray
+        tableView.allowsSelection = false
+        tableView.backgroundColor = .systemGray3
         tableView.register(cells: NewsViewController.cell)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200
@@ -33,7 +33,7 @@ class NewsViewController: UIViewController {
     }
     
     func setupUI() {
-        title = "News"
+        title = "Новости"
         setupTableView()
     }
     
@@ -72,7 +72,7 @@ extension NewsViewController: UITableViewDataSource {
         let cell: NewsTableViewCell = tableView.dequeueReusableCell(indexPath: indexPath)
         let datas = data?.data[indexPath.row]
         cell.configure(with: datas)
-        cell.backgroundColor = .lightGray
+        cell.backgroundColor = .systemGray3
         return cell
     }
     
